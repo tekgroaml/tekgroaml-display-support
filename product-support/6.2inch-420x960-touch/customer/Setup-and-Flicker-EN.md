@@ -1,5 +1,20 @@
 # Raspberry Pi Setup: 6.2-inch Touch Display Timing Profile
 
+Customer lookup name: **6.2-inch 420 × 960 strip touchscreen** (verified input mode; native panel specification unconfirmed).
+
+| Reported driver field | Original → repair |
+| --- | --- |
+| EDID label / identifier bytes | LTM / ZL480; `328d5e04` |
+| EDID structure | 256 bytes, one extension |
+| Input mode | 420 × 960 → unchanged |
+| Pixel clock | 28MHz → 32.4MHz |
+| Refresh | Approximately 51.851852Hz → 60Hz |
+| H front / sync / back | 50 / 20 / 50, unchanged |
+| V front / sync / back | 16 / 4 / 20, unchanged |
+| Repair script filename | `6.2inch-420x960-60hz-ltm-zl480.sh` |
+
+The formal ID requires tool 2.3.0 or later; the old ID `ltm-420x960-60` remains an alias for existing scripts/settings. The driver label is not a confirmed physical part number.
+
 ## Confirm the product first
 
 This guide covers a seller-confirmed HDMI-video/USB-touch variant matching the tested sample. Tested host: Raspberry Pi 4 Model B, Raspberry Pi OS Bookworm Desktop 64-bit, labwc/Wayland.
@@ -21,7 +36,7 @@ Brightness pulsing may require a separate power comparison. A Raspberry Pi showi
 | 1 | `--port 1` / `--screen 1` | HDMI-A-1 | HDMI0, next to USB-C power |
 | 2 | `--port 2` / `--screen 2` | HDMI-A-2 | HDMI1 |
 
-Obtain version **2.2.0 or a later release that retains this profile** from [TEKGROAML Pi Display Tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools), and follow its installation guide. Older installations without the `pi-setting` manager need the new package's `sudo bash scripts/install.sh` entry point for the first upgrade.
+Obtain version **2.3.0 or a later release that retains this profile name** from [TEKGROAML Pi Display Tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools), and follow its installation guide. Older installations without the `pi-setting` manager need the new package's `sudo bash scripts/install.sh` entry point for the first upgrade.
 
 ```bash
 screen-config --version
@@ -46,7 +61,7 @@ Only after confirming the product variant with the seller:
 
 ```bash
 screen-test stop
-screen-config apply --port 1 --profile ltm-420x960-60 --confirm-profile
+screen-config apply --port 1 --profile 6.2inch-420x960-60hz-ltm-zl480 --confirm-profile
 screen-config list
 ```
 
@@ -73,7 +88,7 @@ screen-test stop
 After confirming a stable image on the correct product variant:
 
 ```bash
-screen-config apply --port 1 --profile ltm-420x960-60 --confirm-profile --save
+screen-config apply --port 1 --profile 6.2inch-420x960-60hz-ltm-zl480 --confirm-profile --save
 ```
 
 The saved entry includes the port, EDID identity, profile and acknowledgment. Test login, reboot and cold startup separately. Another device reporting the exact same EDID can still match; clear the old profile before swapping physical displays. Software cannot infer an absent manufacturer part number.

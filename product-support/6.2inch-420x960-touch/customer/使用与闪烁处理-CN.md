@@ -49,7 +49,7 @@ screen-config modes --port 1
 
 ```bash
 screen-test stop
-screen-config apply --port 1 --profile ltm-420x960-60 --confirm-profile
+screen-config apply --port 1 --profile 6.2inch-420x960-60hz-ltm-zl480 --confirm-profile
 screen-config list
 ```
 
@@ -84,7 +84,7 @@ screen-test stop
 仅在本机实际显示稳定、卖家确认型号适用后：
 
 ```bash
-screen-config apply --port 1 --profile ltm-420x960-60 --confirm-profile --save
+screen-config apply --port 1 --profile 6.2inch-420x960-60hz-ltm-zl480 --confirm-profile --save
 ```
 
 保存会记录接口、EDID身份、配置档和已确认标记，启动时再匹配后应用。首次保存后应重新登录、重启和冷启动测试。报告完全相同EDID的其他变体仍可能匹配，**换成另一块屏幕后先清除旧保存项，不要假设程序能识别真实料号**。

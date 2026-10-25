@@ -21,6 +21,10 @@ FAQ/
 │       └── 触摸屏-客服回复与商品说明-CN-EN.md
 └── product-support/
     ├── README.md
+    ├── NAMING.md
+    ├── DEVICE-TEMPLATE.md
+    ├── 4.0inch-720x720-touch/
+    ├── 6.2inch-420x960-nontouch/
     ├── 6.2inch-420x960-touch/
     │   ├── README.md
     │   ├── customer/
