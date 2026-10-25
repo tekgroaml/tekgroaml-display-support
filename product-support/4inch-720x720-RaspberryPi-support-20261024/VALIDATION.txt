@@ -1,0 +1,14 @@
+Historical validation scope (2026-10-24).
+
+Passed logic checks:
+- Produces the previously working 720x720 / approximately 60.004 Hz timing.
+- Preserves per-unit serial/date fields rather than embedding a test unit identity.
+- Accepts the known controller/timing profile and rejects unrelated or malformed EDIDs.
+- Corrected output is idempotent; shell scripts pass syntax checks.
+
+Not completed for this standalone legacy distribution package:
+- Clean-system installation, complete boot/cold-start and uninstall acceptance.
+- Other Raspberry Pi models, OS revisions and controller batches.
+
+This record does not describe the download user's machine or configuration.
+No real host IP, local user directory, passwords or generated touch mappings belong in a public package.

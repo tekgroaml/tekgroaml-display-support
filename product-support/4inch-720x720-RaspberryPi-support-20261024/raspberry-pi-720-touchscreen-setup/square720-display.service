@@ -1,0 +1,13 @@
+[Unit]
+Description=Display compatibility timing for the tested 720x720 square monitor
+After=systemd-udev-trigger.service sys-kernel-debug.mount
+Wants=sys-kernel-debug.mount
+Before=display-manager.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/lib/square720/display_compat.py
+TimeoutStartSec=25
+
+[Install]
+WantedBy=graphical.target
