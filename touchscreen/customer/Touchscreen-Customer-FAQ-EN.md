@@ -121,6 +121,25 @@ Please provide your purchased model, host model, OS version, number of displays,
 
 Support may request a USB device list or a brief touch-event capture. Do not send Wi-Fi passwords, computer login passwords or SSH passwords.
 
+## Q14. How do I report the tool version, and will updating change touch mapping?
+
+Version 2.1 and later provide:
+
+```bash
+pi-setting version
+```
+
+Share the reported version, configuration formats and integrity status with support. Do not share login passwords. Older installations may not have this command; use the updated package's installation instructions for the first upgrade.
+
+After downloading a trusted target release directory, compare it before installing:
+
+```bash
+pi-setting check-update --source ~/pi-setting
+sudo pi-setting upgrade --source ~/pi-setting
+```
+
+This compares already downloaded files. It does not automatically find or download the latest release. Identical versions are skipped, downgrades are rejected, and major upgrades require explicit acknowledgment. Supported existing settings are preserved; unknown configuration formats stop the update before replacement. The test display and touch relay may pause briefly during installation. Use a trusted repository or release tag supplied by the seller.
+
 ## Scope and references
 
 The Raspberry Pi instructions are based on the seller's October 25, 2026 sample testing: Raspberry Pi 4 Model B, Raspberry Pi OS Bookworm Desktop 64-bit, labwc/Wayland. Other operating systems and product combinations require their own verification.

@@ -19,6 +19,8 @@
 
 收集接线照片时，要能看清主机接口、驱动板接口、供电线和USB数据线。允许客户遮住其他无关信息，不需要其登录密码或Wi-Fi密码。
 
+支持工具2.1及以后，先收集`pi-setting version --json`，区分应用版本、命令接口版本与配置格式；安装时间和备份路径由客户机器本地生成。升级规则见[软件版本说明](https://github.com/tekgroaml/tekgroaml-pi-display-tools/blob/main/docs/05-%E7%89%88%E6%9C%AC%E4%B8%8E%E5%8D%87%E7%BA%A7.md)。`check-update --source`只比较已下载目录，不做远程版本查询。
+
 ## 2. 按四层判断
 
 | 层级 | 通过标准 | 未通过时的方向 |
