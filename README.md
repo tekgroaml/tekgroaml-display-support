@@ -6,7 +6,7 @@ GitHub仓库：[tekgroaml-display-support](https://github.com/tekgroaml/tekgroam
 | --- | --- | --- |
 | 触摸屏客户指南 | 中英文常见问题：触摸无响应、相同/不同型号多屏、串屏与偏移 | [触摸屏目录](touchscreen/README.md) |
 | 触摸屏卖家支持 | 排障SOP、客服回复和商品说明模板 | [卖家资料](touchscreen/seller/触摸屏-卖家排障SOP-CN.md) |
-| 产品专项支持 | 4英寸720×720树莓派显示兼容资料和配置包 | [产品支持目录](product-support/README.md) |
+| 产品专项支持 | 4英寸720×720、6.2英寸长条触摸样机的配置与限制 | [产品支持目录](product-support/README.md) |
 
 ```text
 FAQ/
@@ -21,6 +21,10 @@ FAQ/
 │       └── 触摸屏-客服回复与商品说明-CN-EN.md
 └── product-support/
     ├── README.md
+    ├── 6.2inch-420x960-touch/
+    │   ├── README.md
+    │   ├── customer/
+    │   └── seller/
     └── 4inch-720x720-RaspberryPi-support-20261024/
         ├── SELLER_NOTES_CN.md
         ├── VALIDATION.txt
