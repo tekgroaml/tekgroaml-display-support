@@ -149,3 +149,11 @@ The Raspberry Pi instructions are based on the seller's October 25, 2026 sample 
 [2] [Microsoft: Using multiple monitors in Windows](https://support.microsoft.com/en-us/windows/hardware/display-graphics/how-to-use-multiple-monitors-in-windows)
 
 [Back to touchscreen documentation](../README.md)
+
+## Touch on each screen responds on the other screen
+
+The USB touch cables and HDMI outputs may be paired in reverse. Identify each controller by touching one screen at a time, then swap the USB connections or ask support to exchange the software mappings. Display resolution does not need to change.
+
+Label cable pairs `HDMI-1 + USB-TOUCH-1` and `HDMI-2 + USB-TOUCH-2`. Screen 1 means Linux HDMI-A-1 (board HDMI0); screen 2 means HDMI-A-2 (board HDMI1). USB topology numbers do not identify HDMI outputs. Different screen models may also report identical USB controller names.
+
+Starting with tools version 2.3.1, the dual-touch setup script creates `/dev/input/USB-TOUCH-1` and `/dev/input/USB-TOUCH-2` from confirmed pairs. Keep the same Raspberry Pi USB sockets and cable pairs. Reconfigure after changing sockets, hubs, controllers, or screen assignments. These names follow USB socket paths, not individual cables moved between sockets.

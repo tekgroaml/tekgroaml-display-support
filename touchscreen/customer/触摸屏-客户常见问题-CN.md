@@ -151,3 +151,13 @@ sudo pi-setting upgrade --source ~/pi-setting
 [2] [Microsoft：在Windows中使用多台显示器](https://support.microsoft.com/en-us/windows/hardware/display-graphics/how-to-use-multiple-monitors-in-windows)
 
 [返回触摸屏资料目录](../README.md)
+
+## 两块屏幕的触摸恰好反了，如何处理？
+
+这通常表示两根USB触摸数据线与HDMI的配对反了。先一次只点一块屏幕确认，再交换USB连接，或请技术支持交换软件中的两个触摸绑定；无需调整分辨率。
+
+建议为HDMI与USB线缆成对贴标签：`HDMI-1 + USB-TOUCH-1`、`HDMI-2 + USB-TOUCH-2`。编号1对应Linux HDMI-A-1（板子HDMI0），编号2对应HDMI-A-2（板子HDMI1）。USB插口路径数字不能直接当作屏幕编号。
+
+支持工具2.3.1起，双触摸配置脚本会按确认的对应关系建立 `/dev/input/USB-TOUCH-1`、`/dev/input/USB-TOUCH-2` 固定名称。保持树莓派USB插口和配对不变；改变插口、集线器或触摸控制器后需重新确认。不同型号屏幕也可能报告相同USB名称，不能只按名称判断。
+
+具体命令见[双屏触摸配置说明](https://github.com/tekgroaml/tekgroaml-pi-display-tools/blob/main/docs/04-触摸测试与双屏映射.md)。
