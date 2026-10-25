@@ -41,7 +41,7 @@ screen-test touch --screen 2
 screen-test stop
 ```
 
-In this tool, Screen 1 means HDMI0 and Screen 2 means HDMI1, regardless of their left/right desktop arrangement. These numbers may differ from another operating system's display numbers.
+Configuration `--port` and test `--screen` now both use 1/2: 1 selects Linux connector `HDMI-A-1` (board HDMI0), and 2 selects `HDMI-A-2` (board HDMI1), regardless of their left/right desktop arrangement. These numbers may differ from another operating system's display numbers.
 
 Check that each physical screen responds on itself, the marker follows your finger, and movement is reasonably continuous. Hitting five targets is a sample check, not certification of every edge, calibration or multitouch capability.
 
