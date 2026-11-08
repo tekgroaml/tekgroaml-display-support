@@ -18,7 +18,9 @@ Choose your screen below, then find the symptom that matches what you see. Each 
 
 | Product | What you may see |
 | --- | --- |
-| [2.8-inch 480×480, touch status unconfirmed](2.8inch-480x480-touch-unconfirmed/README.md) | Black screen; “Remote I/O error”; touch option needs checking. |
+| [2.1-inch single-screen touch model (resolution pending)](2.1inch-resolution-unconfirmed-touch/README.md) | Touch model available; check USB data and screen assignment first. |
+| [2.8-inch single-screen touch model (resolution pending)](2.8inch-resolution-unconfirmed-touch/README.md) | Touch model available; check USB data and screen assignment first. |
+| [2.8-inch 480×480 historical test pair (exact variant pending)](2.8inch-480x480-touch-unconfirmed/README.md) | Black screen; “Remote I/O error”; touch option needs checking. |
 | [3.4-inch 800×800 touchscreen](3.4inch-800x800-touch/README.md) | No picture after swapping screens; wrong image; touch reaches another display. |
 | [4.0-inch 720×720 touchscreen](4.0inch-720x720-touch/README.md) | Black screen or flicker; touch missing or on the wrong display. |
 | [6.2-inch 360×960 cut-panel touchscreen](6.2inch-360x960-touch/README.md) | Left-side content missing; left touches offset; picture flickers. |
@@ -29,6 +31,17 @@ Choose your screen below, then find the symptom that matches what you see. Each 
 [Choose shape and same/different content](_unconfirmed/README.md): round SBS, square SBS, round hardware-copy and square hardware-copy kits. Added issues cover one dark panel, demos stopping after a swap, mixing 480×480 and 960×480 inputs, and apps rejecting observed ~62.811/~71.295Hz rates.
 
 These are provisional connection records, not identified new SKUs. They stay outside the inch-sorted table and are not assigned to the 2.8-inch product. Windows and Pi steps are separate. Refresh compatibility changed app acceptance only, not screen timings.
+
+## Non-touch dual-screen kit list
+
+Sizes are still being matched to the kits; all four configurations below are non-touch.
+
+| Kit | FAQ |
+| --- | --- |
+| Round dual-screen / same content / non-touch | [FAQ](_unconfirmed/480x480-round-dual-clone-nontouch/README.md) |
+| Round dual-screen / different content / non-touch | [FAQ](_unconfirmed/480x480-round-dual-sbs-nontouch/README.md) |
+| Square dual-screen / same content / non-touch | [FAQ](_unconfirmed/480x480-square-dual-clone-nontouch/README.md) |
+| Square dual-screen / different content / non-touch | [FAQ](_unconfirmed/480x480-square-dual-sbs-nontouch/README.md) |
 
 ## Three issue categories
 

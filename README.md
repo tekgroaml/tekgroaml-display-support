@@ -16,7 +16,9 @@ Start with the symptom you can observe: **no picture or flicker**, **touch missi
 
 | Product | English FAQ | 中文FAQ |
 | --- | --- | --- |
-| 2.8-inch 480×480, touch status unconfirmed | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) |
+| 2.1-inch single-screen touch model (resolution pending) | [English](product-support/2.1inch-resolution-unconfirmed-touch/README.md) | [中文](product-support/2.1inch-resolution-unconfirmed-touch/README.zh-CN.md) |
+| 2.8-inch single-screen touch model (resolution pending) | [English](product-support/2.8inch-resolution-unconfirmed-touch/README.md) | [中文](product-support/2.8inch-resolution-unconfirmed-touch/README.zh-CN.md) |
+| 2.8-inch 480×480 historical test pair (exact variant pending) | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) |
 | 3.4-inch 800×800 touchscreen | [English](product-support/3.4inch-800x800-touch/README.md) | [中文](product-support/3.4inch-800x800-touch/README.zh-CN.md) |
 | 4.0-inch 720×720 touchscreen | [English](product-support/4.0inch-720x720-touch/README.md) | [中文](product-support/4.0inch-720x720-touch/README.zh-CN.md) |
 | 6.2-inch 360×960 cut-panel touchscreen | [English](product-support/6.2inch-360x960-touch/README.md) | [中文](product-support/6.2inch-360x960-touch/README.zh-CN.md) |
@@ -27,6 +29,17 @@ Start with the symptom you can observe: **no picture or flicker**, **touch missi
 [Choose shape and same/different content](product-support/_unconfirmed/README.md): round SBS, square SBS, round hardware-copy and square hardware-copy kits. Added issues cover one dark panel, demos stopping after a swap, mixing 480×480 and 960×480 inputs, and apps rejecting observed ~62.811/~71.295Hz rates.
 
 These are provisional connection records, not identified new SKUs. They stay outside the inch-sorted table and are not assigned to the 2.8-inch product. Windows and Pi steps are separate. Refresh compatibility changed app acceptance only, not screen timings.
+
+## Non-touch dual-screen kit list
+
+Sizes are still being matched to the kits; all four configurations below are non-touch.
+
+| Kit | FAQ |
+| --- | --- |
+| Round dual-screen / same content / non-touch | [English](product-support/_unconfirmed/480x480-round-dual-clone-nontouch/README.md) | [中文](product-support/_unconfirmed/480x480-round-dual-clone-nontouch/README.zh-CN.md) |
+| Round dual-screen / different content / non-touch | [English](product-support/_unconfirmed/480x480-round-dual-sbs-nontouch/README.md) | [中文](product-support/_unconfirmed/480x480-round-dual-sbs-nontouch/README.zh-CN.md) |
+| Square dual-screen / same content / non-touch | [English](product-support/_unconfirmed/480x480-square-dual-clone-nontouch/README.md) | [中文](product-support/_unconfirmed/480x480-square-dual-clone-nontouch/README.zh-CN.md) |
+| Square dual-screen / different content / non-touch | [English](product-support/_unconfirmed/480x480-square-dual-sbs-nontouch/README.md) | [中文](product-support/_unconfirmed/480x480-square-dual-sbs-nontouch/README.zh-CN.md) |
 
 ## Prefer to let AI help?
 

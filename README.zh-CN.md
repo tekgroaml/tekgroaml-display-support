@@ -16,17 +16,30 @@
 
 | 产品 | 中文FAQ | English FAQ |
 | --- | --- | --- |
-| 2.8英寸480×480，触摸属性待确认 | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) |
+| 2.1英寸单屏触摸款（分辨率待补充） | [中文](product-support/2.1inch-resolution-unconfirmed-touch/README.zh-CN.md) | [English](product-support/2.1inch-resolution-unconfirmed-touch/README.md) |
+| 2.8英寸单屏触摸款（分辨率待补充） | [中文](product-support/2.8inch-resolution-unconfirmed-touch/README.zh-CN.md) | [English](product-support/2.8inch-resolution-unconfirmed-touch/README.md) |
+| 2.8英寸480×480历史双屏记录（具体款式待核对） | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) |
 | 3.4英寸800×800触摸屏 | [中文](product-support/3.4inch-800x800-touch/README.zh-CN.md) | [English](product-support/3.4inch-800x800-touch/README.md) |
 | 4.0英寸720×720触摸屏 | [中文](product-support/4.0inch-720x720-touch/README.zh-CN.md) | [English](product-support/4.0inch-720x720-touch/README.md) |
 | 6.2英寸360×960切割触摸屏 | [中文](product-support/6.2inch-360x960-touch/README.zh-CN.md) | [English](product-support/6.2inch-360x960-touch/README.md) |
 | 6.2英寸360×960切割非触摸屏 | [中文](product-support/6.2inch-360x960-nontouch/README.zh-CN.md) | [English](product-support/6.2inch-360x960-nontouch/README.md) |
 
-## 尺寸与触摸属性待确认的双屏记录
+## 非触摸双屏套装（尺寸待核对）
 
 [按形状与同显／异显查看](product-support/_unconfirmed/README.zh-CN.md)：圆形异显、方形异显、圆形同显、方形同显。新增问题包括只有一块显示、换屏后演示停止、480×480与960×480输入混用，以及应用未接受实际上报的约62.811／71.295Hz。
 
 这些是待核对的连接样本，不是已确认的新SKU，不插入上方按英寸升序的产品表，也不归到2.8英寸款。Windows与树莓派分别说明；刷新率兼容更新只改变应用接受范围，没有改屏幕时序。
+
+## 非触摸双屏套装列表
+
+各套装尺寸仍待对应，以下四种配置均已确认不带触摸。
+
+| 套装 | FAQ |
+| --- | --- |
+| 圆形双屏／同显／非触摸 | [中文](product-support/_unconfirmed/480x480-round-dual-clone-nontouch/README.zh-CN.md) | [English](product-support/_unconfirmed/480x480-round-dual-clone-nontouch/README.md) |
+| 圆形双屏／异显／非触摸 | [中文](product-support/_unconfirmed/480x480-round-dual-sbs-nontouch/README.zh-CN.md) | [English](product-support/_unconfirmed/480x480-round-dual-sbs-nontouch/README.md) |
+| 方形双屏／同显／非触摸 | [中文](product-support/_unconfirmed/480x480-square-dual-clone-nontouch/README.zh-CN.md) | [English](product-support/_unconfirmed/480x480-square-dual-clone-nontouch/README.md) |
+| 方形双屏／异显／非触摸 | [中文](product-support/_unconfirmed/480x480-square-dual-sbs-nontouch/README.zh-CN.md) | [English](product-support/_unconfirmed/480x480-square-dual-sbs-nontouch/README.md) |
 
 ## 会用 GPT 或 Claude？让 AI 帮你一起搞定
 
