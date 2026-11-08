@@ -4,6 +4,8 @@
 
 Find your screen by **size – resolution – touch capability** in the [product FAQ directory](product-support/README.md). Each current product has a separate English FAQ and Chinese FAQ with reciprocal language links. Updated 2026-11-08.
 
+Start with the symptom you can observe: **no picture or flicker**, **touch missing or inaccurate**, or **part of the image missing**. Open your product below for steps to try. Technical data is available at the end of each FAQ.
+
 | Product | English FAQ | 中文FAQ |
 | --- | --- | --- |
 | 2.8-inch 480×480, touch status unconfirmed | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) |

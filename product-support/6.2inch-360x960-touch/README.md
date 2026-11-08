@@ -2,7 +2,62 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-## Product information
+For the 6.2-inch strip touchscreen sold as 360×960. The tested cut-glass sample needs a special visible-area layout. The workaround below fixes one test application; it is not a whole-desktop driver or a permanent screen-firmware update.
+
+Commands below run on the Raspberry Pi after installing the [display tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools). Use version 2.3.2+ for rectangular touch tests. Examples select connector 1 (`HDMI-A-1`, board HDMI0); replace 1 with 2 for connector 2 (board HDMI1). Run screen tests as the desktop user, without sudo.
+
+## The left side is missing: text, buttons or targets are cut off
+
+**What you may see:** right-side content looks complete, but the left border and left-side buttons are missing. Changing resolution alone may not help.
+
+Try the included compensated test application:
+
+1. Install display tools 2.3.2+ and download this support repository. Close any older temporary test window first.
+2. From the **support repository root**, inspect the connected screen:
+
+   ```bash
+   screen-config list
+   screen-test stop
+   ```
+
+3. If the selected output is already **420×960, normal rotation, scale 1**, run:
+
+   ```bash
+   python3 product-support/6.2inch-360x960-touch/scripts/6.2inch-360x960-touch-window-demo.py --screen 1
+   ```
+
+4. Check that all four white borders and all five numbered circles are visible. Tap and slide to check touch alignment. Press Ctrl+C in the launching terminal to close the demo.
+
+A prior temporary application using this method showed complete content and accurate touch on the sample. The included program reproduces that method and has had a launch/screenshot check; its new five-point UI still needs its own physical acceptance check. If the command rejects your output mode or the borders remain clipped, send a photo and `screen-config list` to support. Do not save an unverified profile or guess a new resolution.
+
+**Scope:** compensation is inside this application only. The ordinary desktop, browser and stock `screen-test` are not automatically compensated. Applications intended for this screen need the same visible-area layout.
+
+## Buttons on the right are close, but left-side touches land too far left
+
+First check that touch reaches this physical screen rather than another one; use the [pairing guide](../_shared/README.md#2-touch-does-not-respond-or-reaches-the-wrong-position) if necessary. Then use the compensated demo above: it corrects the visible content and touch position together.
+
+Tap the center and all four corner targets. A target should turn green and the white touch mark should follow your finger. If the input has already been calibrated elsewhere, do not apply the correction twice. Ordinary `screen-test touch --shape rect` changes target layout but does not include this cut-panel correction.
+
+## The picture flickers, even though content is visible
+
+1. Check rated screen power and cables first.
+2. If support confirms this sample matches the known touch-strip profile, try the timing correction below. Save desktop work first: applying it may restart the desktop, and it has no timed rollback.
+
+   ```bash
+   screen-config apply --port 1 --profile 6.2inch-420x960-60hz-ltm-zl480 --confirm-profile
+   screen-test pattern --screen 1
+   ```
+
+3. Inspect stability separately from image completeness. A 60Hz test improved flicker on an earlier touch sample, **but it did not fix the missing left edge**.
+
+The successful cut-window and touch test used approximately 51.85Hz. The combined 60Hz-plus-compensation configuration still needs physical verification. Do not add `--save` on the strength of a stable picture alone.
+
+## Technical details and test records
+
+<details>
+<summary>Show product data, repair details and validation limits</summary>
+
+#### Product information
 
 | Field | Recorded information |
 | --- | --- |
@@ -12,7 +67,7 @@
 | Environment | Raspberry Pi 4B; Raspberry Pi OS Bookworm Desktop 64-bit; labwc/Wayland |
 | SKU / ASIN / panel part number / PCB revision | Not established; match the actual item before using a repair |
 
-## Reported data and visible area
+#### Reported data and visible area
 
 | Item | Evidence |
 | --- | --- |
@@ -27,7 +82,7 @@
 
 The ruler/photo plus complete-image test support this input-coordinate window on the sample. They do not determine the uncut glass resolution, internal scan architecture or firmware encryption. No firmware was read or written.
 
-## 1. Flicker / no picture: timing is one separate issue
+#### 1. Flicker / no picture: timing is one separate issue
 
 An earlier touch sample stopped flickering at 420×960, 32.4MHz, exactly 60Hz. This corrects the input clock, **not the cut-panel window**. Later border tests showed left cropping still present. Earlier claims that 60Hz alone restored a complete image are superseded by this finding.
 
@@ -43,7 +98,7 @@ The profile's historical name uses input width 420. It does not rename the physi
 
 The successful visible-window/touch trial on 2026-11-08 used the original approximately 51.85Hz input. **Combined 60Hz + window compensation + touch compensation has not yet been physically confirmed.**
 
-## 2. Touch offset: scale and offset together
+#### 2. Touch offset: scale and offset together
 
 Once a complete 360-wide image was placed in the visible window, right targets were close but left targets had a larger leftward error. A center tap arrived near desktop x=209, while the drawn visible center was x=240.
 
@@ -63,7 +118,7 @@ canvas_y = received_window_y
 
 These formulas use desktop/window pixel coordinates, not raw 0…4096 controller units. Do not apply them a second time to an already calibrated input device. Correct output routing first; the shared USB relay changes names/routing, not calibration. Other controllers, rotations, desktop scales and output geometry require fresh measurements.
 
-## 3. Cut-panel display compensation: reproduce the verified approach
+#### 3. Cut-panel display compensation: reproduce the verified approach
 
 Keep the 420×960 HDMI canvas. Reserve x=0…59 as unused black pixels. Lay out the **entire application** in a 360×960 logical canvas and draw it with an x offset of 60. Do not simply shift a full 420-wide UI: its right 60 columns would then be clipped.
 
@@ -77,7 +132,7 @@ Keep the 420×960 HDMI canvas. Reserve x=0…59 as unused black pixels. Lay out 
 | 420-wide input; content only at x=60…419 | Customer confirmed complete content |
 | Same visible window plus X touch scale/offset | Customer confirmed accurate touch |
 
-### Included application demo
+##### Included application demo
 
 [scripts/6.2inch-360x960-touch-window-demo.py](scripts/6.2inch-360x960-touch-window-demo.py) packages the tested application-level idea for reproduction. It requires the installed display tools 2.3.2+, their GTK dependencies and a running labwc/Wayland desktop. This newly packaged file is not itself a released `screen-config` profile or a system calibration utility.
 
@@ -93,14 +148,18 @@ The selected output must already be 420×960, unrotated, at scale 1. The program
 
 Stop with Ctrl+C in the launching SSH terminal. No service or boot setting is installed. Old temporary experiments must be closed first; an older overlay can hide this one. Exit the old foreground program with Ctrl+C, or use its recorded PID to terminate only that program.
 
-### What is and is not fixed
+##### What is and is not fixed
 
 Confirmed on the original temporary program: complete visible content and accurate sampled touch. Not yet implemented/qualified: an entire 360-wide desktop, arbitrary third-party application placement, compositor-wide calibration, startup persistence, reconnects, cold boot, all edge points, multitouch or other batches. Stock `screen-test touch --shape rect` only changes layout; it does not know this crop. Other applications must implement the same logical canvas/input transform, or a separately tested compositor solution is needed. No firmware modification is needed for this application-level workaround.
 
 [Product index](../README.md) · [Shared touch and multi-screen procedures](../_shared/README.md)
 
-## Evidence and packaged-demo check
+#### Evidence and packaged-demo check
 
 - [Application screenshot](evidence/application-window-screenshot.png): full 420×960 captured input, with content inside the rightmost 360 columns. The black 60-column strip is deliberately outside the visible window.
 - The packaged demo was launched on the connected Pi at 420×960 / 51.852001Hz on 2026-11-08; screenshot confirmed its border and five targets lie inside x=60…419. Its new five-point UI has not received a separate physical touch acceptance pass; the prior temporary program supplied the user-confirmed display/touch result.
 - [Physical pixel-ruler photograph](evidence/physical-pixel-ruler.png): customer-provided evidence used to identify the visible window.
+
+</details>
+
+[Product index](../README.md) · [Shared troubleshooting](../_shared/README.md)

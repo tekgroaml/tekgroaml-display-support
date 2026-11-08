@@ -4,6 +4,8 @@
 
 按**尺寸－分辨率－是否触摸**进入[产品FAQ目录](product-support/README.zh-CN.md)。每款独立提供英文、中文，互有语言切换链接；默认入口英文。更新：2026-11-08。
 
+先从你看到的现象开始：**黑屏或闪烁**、**触摸没反应或不准**、**画面显示不完整**。进入对应产品后先看处理步骤，详细参数在各FAQ末尾。
+
 | 产品 | 中文FAQ | English FAQ |
 | --- | --- | --- |
 | 2.8英寸480×480，触摸属性待确认 | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) |
