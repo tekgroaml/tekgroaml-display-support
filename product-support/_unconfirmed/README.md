@@ -26,3 +26,5 @@ Match the per-panel inch size, advertised resolution, order/SKU and board revisi
 Original tests: 2026-11-01. Documentation: 2026-11-08. Round different-content physical flight output and the square different-content reconnect result were buyer-confirmed. Other same-content evidence is app launch/runtime evidence, not a new physical acceptance. Windows, cold boot and other batches remain unverified for these kits.
 
 [All products](../README.md) · [Shared troubleshooting](../_shared/README.md)
+
+The seller has now confirmed two non-touch dual-screen sizes: [2.1-inch](../2.1inch-480x480-dual-nontouch/README.md) and [2.8-inch](../2.8inch-480x480-dual-nontouch/README.md), both 480×480 **per panel**. The remaining uncertainty is which earlier shape/layout record belongs to which size/board, not whether these two sizes exist. The single-screen touch variants are separate.

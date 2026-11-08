@@ -17,7 +17,9 @@ Start with the symptom you can observe: **no picture or flicker**, **touch missi
 | Product | English FAQ | 中文FAQ |
 | --- | --- | --- |
 | 2.1-inch single-screen touch model (resolution pending) | [English](product-support/2.1inch-resolution-unconfirmed-touch/README.md) | [中文](product-support/2.1inch-resolution-unconfirmed-touch/README.zh-CN.md) |
+| 2.1-inch dual-screen, 480×480 each, non-touch | [English](product-support/2.1inch-480x480-dual-nontouch/README.md) | [中文](product-support/2.1inch-480x480-dual-nontouch/README.zh-CN.md) |
 | 2.8-inch single-screen touch model (resolution pending) | [English](product-support/2.8inch-resolution-unconfirmed-touch/README.md) | [中文](product-support/2.8inch-resolution-unconfirmed-touch/README.zh-CN.md) |
+| 2.8-inch dual-screen, 480×480 each, non-touch | [English](product-support/2.8inch-480x480-dual-nontouch/README.md) | [中文](product-support/2.8inch-480x480-dual-nontouch/README.zh-CN.md) |
 | 2.8-inch 480×480 historical test pair (exact variant pending) | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) |
 | 3.4-inch 800×800 touchscreen | [English](product-support/3.4inch-800x800-touch/README.md) | [中文](product-support/3.4inch-800x800-touch/README.zh-CN.md) |
 | 4.0-inch 720×720 touchscreen | [English](product-support/4.0inch-720x720-touch/README.md) | [中文](product-support/4.0inch-720x720-touch/README.zh-CN.md) |

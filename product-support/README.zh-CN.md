@@ -19,7 +19,9 @@ Updated / 更新：2026-11-08。
 | 产品 | 你遇到的现象 |
 | --- | --- |
 | [2.1英寸单屏触摸款（分辨率待补充）](2.1inch-resolution-unconfirmed-touch/README.zh-CN.md) | 已确认有触摸型号，先查USB数据线与对应屏幕。 |
+| [2.1英寸双屏，每屏480×480，非触摸](2.1inch-480x480-dual-nontouch/README.zh-CN.md) | 先查接线及同显／异显布局；非触摸不响应手指。 |
 | [2.8英寸单屏触摸款（分辨率待补充）](2.8inch-resolution-unconfirmed-touch/README.zh-CN.md) | 已确认有触摸型号，先查USB数据线与对应屏幕。 |
+| [2.8英寸双屏，每屏480×480，非触摸](2.8inch-480x480-dual-nontouch/README.zh-CN.md) | 先查接线及同显／异显布局；非触摸不响应手指。 |
 | [2.8英寸480×480历史双屏记录（具体款式待核对）](2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) | 通电黑屏；命令报Remote I/O error；触摸选项待核对。 |
 | [3.4英寸800×800触摸屏](3.4inch-800x800-touch/README.zh-CN.md) | 换屏后没画面／画面不对；触摸响应到另一块屏。 |
 | [4.0英寸720×720触摸屏](4.0inch-720x720-touch/README.zh-CN.md) | 通电黑屏／闪烁；触摸没反应／串屏。 |

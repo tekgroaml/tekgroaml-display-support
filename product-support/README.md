@@ -19,7 +19,9 @@ Choose your screen below, then find the symptom that matches what you see. Each 
 | Product | What you may see |
 | --- | --- |
 | [2.1-inch single-screen touch model (resolution pending)](2.1inch-resolution-unconfirmed-touch/README.md) | Touch model available; check USB data and screen assignment first. |
+| [2.1-inch dual-screen, 480×480 each, non-touch](2.1inch-480x480-dual-nontouch/README.md) | Check connections and same/different-content layout; tapping does nothing. |
 | [2.8-inch single-screen touch model (resolution pending)](2.8inch-resolution-unconfirmed-touch/README.md) | Touch model available; check USB data and screen assignment first. |
+| [2.8-inch dual-screen, 480×480 each, non-touch](2.8inch-480x480-dual-nontouch/README.md) | Check connections and same/different-content layout; tapping does nothing. |
 | [2.8-inch 480×480 historical test pair (exact variant pending)](2.8inch-480x480-touch-unconfirmed/README.md) | Black screen; “Remote I/O error”; touch option needs checking. |
 | [3.4-inch 800×800 touchscreen](3.4inch-800x800-touch/README.md) | No picture after swapping screens; wrong image; touch reaches another display. |
 | [4.0-inch 720×720 touchscreen](4.0inch-720x720-touch/README.md) | Black screen or flicker; touch missing or on the wrong display. |

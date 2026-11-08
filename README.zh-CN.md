@@ -17,7 +17,9 @@
 | 产品 | 中文FAQ | English FAQ |
 | --- | --- | --- |
 | 2.1英寸单屏触摸款（分辨率待补充） | [中文](product-support/2.1inch-resolution-unconfirmed-touch/README.zh-CN.md) | [English](product-support/2.1inch-resolution-unconfirmed-touch/README.md) |
+| 2.1英寸双屏，每屏480×480，非触摸 | [中文](product-support/2.1inch-480x480-dual-nontouch/README.zh-CN.md) | [English](product-support/2.1inch-480x480-dual-nontouch/README.md) |
 | 2.8英寸单屏触摸款（分辨率待补充） | [中文](product-support/2.8inch-resolution-unconfirmed-touch/README.zh-CN.md) | [English](product-support/2.8inch-resolution-unconfirmed-touch/README.md) |
+| 2.8英寸双屏，每屏480×480，非触摸 | [中文](product-support/2.8inch-480x480-dual-nontouch/README.zh-CN.md) | [English](product-support/2.8inch-480x480-dual-nontouch/README.md) |
 | 2.8英寸480×480历史双屏记录（具体款式待核对） | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) |
 | 3.4英寸800×800触摸屏 | [中文](product-support/3.4inch-800x800-touch/README.zh-CN.md) | [English](product-support/3.4inch-800x800-touch/README.md) |
 | 4.0英寸720×720触摸屏 | [中文](product-support/4.0inch-720x720-touch/README.zh-CN.md) | [English](product-support/4.0inch-720x720-touch/README.md) |
