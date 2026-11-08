@@ -12,6 +12,8 @@ Start with the symptom you can observe: **no picture or flicker**, **touch missi
 - **No touch, or touch on another screen?** For a touch model, plug its USB power/touch data cable into the **same computer that sends the picture**, not just a charger. Check each screen's HDMI and USB as a pair. A charging-only cable cannot carry touch.
 - **Using Windows?** Start with the [Windows picture and touch steps](platforms/windows/README.md). The Raspberry Pi commands in this repository do not run on Windows.
 
+**Product options:** the current dual-screen kits are non-touch. The 2.1-inch and 2.8-inch single-screen ranges include touch models. The 2.1-inch resolution and model-specific test results have not been recorded; an available touch option is not a completed touch test. The older 2.8-inch black-screen pair has not been matched to a confirmed touch/non-touch SKU.
+
 | Product | English FAQ | 中文FAQ |
 | --- | --- | --- |
 | 2.8-inch 480×480, touch status unconfirmed | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) |
@@ -19,6 +21,12 @@ Start with the symptom you can observe: **no picture or flicker**, **touch missi
 | 4.0-inch 720×720 touchscreen | [English](product-support/4.0inch-720x720-touch/README.md) | [中文](product-support/4.0inch-720x720-touch/README.zh-CN.md) |
 | 6.2-inch 360×960 cut-panel touchscreen | [English](product-support/6.2inch-360x960-touch/README.md) | [中文](product-support/6.2inch-360x960-touch/README.zh-CN.md) |
 | 6.2-inch 360×960 cut panel, non-touch | [English](product-support/6.2inch-360x960-nontouch/README.md) | [中文](product-support/6.2inch-360x960-nontouch/README.zh-CN.md) |
+
+## Non-touch dual-screen records with size unconfirmed
+
+[Choose shape and same/different content](product-support/_unconfirmed/README.md): round SBS, square SBS, round hardware-copy and square hardware-copy kits. Added issues cover one dark panel, demos stopping after a swap, mixing 480×480 and 960×480 inputs, and apps rejecting observed ~62.811/~71.295Hz rates.
+
+These are provisional connection records, not identified new SKUs. They stay outside the inch-sorted table and are not assigned to the 2.8-inch product. Windows and Pi steps are separate. Refresh compatibility changed app acceptance only, not screen timings.
 
 ## Prefer to let AI help?
 

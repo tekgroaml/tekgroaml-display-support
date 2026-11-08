@@ -2,6 +2,8 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
+**Product option update:** the 2.8-inch single-screen range has a touch model. This page retains an older black-screen pair whose exact SKU has not been matched; it does not mean the product range lacks touch. The current non-touch dual-screen kits are documented separately.
+
 Please check the size, resolution and touch option on your order. Start with the simple checks below; no commands are needed.
 
 ## The screen goes black or flickers after a cable is moved

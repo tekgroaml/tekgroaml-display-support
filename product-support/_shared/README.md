@@ -8,6 +8,12 @@
 - **No touch, or touch on another screen?** For a touch model, plug its USB power/touch data cable into the **same computer that sends the picture**, not just a charger. Check each screen's HDMI and USB as a pair. A charging-only cable cannot carry touch.
 - **Using Windows?** Start with the [Windows picture and touch steps](../../platforms/windows/README.md). The Raspberry Pi commands in this repository do not run on Windows.
 
+## One HDMI drives two panels: check the input design
+
+One logical monitor can be normal. A hardware-copy board duplicates one picture; an SBS board splits a double-width picture. These sessions used 480×480 for hardware copy and 960×480 for different-content SBS, but that is not a universal dual-screen specification. [Choose the sample record](../_unconfirmed/README.md); size and touch options remain unconfirmed.
+
+For one dark panel, check cables, power and the board first. A complete two-region screenshot does not rule out a physical fault. If a demo stops after changing boards, inspect input/layout compatibility instead of applying another product's timing profile or forcing 60Hz.
+
 ## Optional Raspberry Pi commands and support records
 
 <details>
@@ -17,8 +23,8 @@ Updated 2026-11-08. Use the [product index](../README.md) first. Procedures appl
 
 | Public number | Linux connector | Board label | USB cable label after confirmed pairing |
 | --- | --- | --- | --- |
-| 1 | HDMI-A-1 | HDMI0 | USB-TOUCH-1 |
-| 2 | HDMI-A-2 | HDMI1 | USB-TOUCH-2 |
+| 1 | HDMI-A-1 | HDMI 0 | USB-TOUCH-1 |
+| 2 | HDMI-A-2 | HDMI 1 | USB-TOUCH-2 |
 
 Numbers identify connectors, not desktop left/right order or another OS's display numbering. Examples select screen 1; change to 2 where needed. Run rendering tests as the logged-in desktop user over SSH, without sudo. Display configuration commands request root as needed. HDMI carries video; USB data carries touch; power requirements come from the item specification.
 
@@ -35,7 +41,7 @@ For the 4.0-inch square and an earlier 6.2-inch touch sample, EDID/timing correc
    ```
 
 3. Select an advertised mode only if it matches the product. `set` cannot add missing timings. `auto` selects the preferred advertised mode after validating EDID; an incorrect EDID can select an incorrect mode.
-4. Use a documented compatibility profile only for the corresponding verified controller/timing. EDID names such as ZL480, EDID physical millimetres and serial strings do not establish panel dimensions, SKU or chip model.
+4. Use a documented compatibility profile only for the corresponding verified controller/timing. EDID names such as ZL 480, EDID physical millimetres and serial strings do not establish panel dimensions, SKU or chip model.
 5. Verify the physical screen, not only CLI output or screenshots:
 
    ```bash
@@ -113,6 +119,25 @@ screen-test pattern --screen 1
 
 This is a verified recovery step for that session, not a published automatic hot-plug fix. Non-touch screens can display patterns and targets. If no Wayland session exists, log into the graphical desktop; SSH login alone does not start it. Restarting the display manager closes graphical applications and should not be the first generic step. An SSH `Broken pipe` means the remote terminal connection was lost; inspect network/power/reboot state separately. Keepalive can reduce idle disconnects, not repair physical display faults.
 
+## 4. A two-panel demo stops after a board change or rejects the mode
+
+The 2026-11-01 sessions recorded distinct inputs: 960×480 at ~62.825Hz for two 480 SBS panels; 480×480 at ~62.811Hz for hardware copy; and ~71.295Hz on a later round copy board. Do not assume these connections identify one SKU. Labels such as DELL U 2410 in EDID do not establish size or manufacturer.
+
+The later ~62.811/~71.295Hz compatibility changes updated layout acceptance in the separate [app repository](https://github.com/tekgroaml/lvgl-embedded-gui-demos). They did not change HDMI timings or screen firmware and did not create screen-config repair profiles. App v0.10.2 includes four script families. Follow its full upgrade instructions: stop the old version, copy the complete project, and use the logged-in desktop user over SSH without sudo.
+
+| Content / shape | Script | Input recorded |
+| --- | --- | --- |
+| Same / round | ./demos/same/round/demo | 480×480 clone, observed ~62.811 or 71.295Hz |
+| Same / square | ./demos/same/square/demo | 480×480 clone, observed ~62.811Hz |
+| Different / round | ./demos/different/round/demo | 960×480 SBS, observed ~62.825Hz |
+| Different / square | ./demos/different/square/demo | 960×480 SBS, observed ~62.825Hz |
+
+See the [four sample entries](../_unconfirmed/README.md) for complete commands and physical acceptance limits. Same-content scripts default to clone; explicit --signal sbs selects double-width software duplication. The square same-content SBS layout does not accept~62.825Hz, so do not transfer the square different-content profile's acceptance to it.
+
+A disconnected or changed output can end the app. After reconnecting power/video stably and logging into the desktop, stop the old instance and check/start the matching script. Automatic restart is not established. Normal stop closes the app; there is no timing change, timed rollback or reset of system settings made by other tools. Legacy command adapters do not replace a full upgrade.
+
+All demos use simulated data and no sound. No touch interaction does not mean a non-touch product. Pi 4B has no onboard speaker; a device named Built-in Audio is an output, not proof of a screen speaker. An unsuccessful HDMI audio trial did not establish its cause or prove a faulty/speakerless display.
+
 ## Test coverage record
 
 | Scenario | Recorded conclusion |
@@ -133,9 +158,17 @@ This is a verified recovery step for that session, not a published automatic hot
 | Cut strip with matching touch scaling | Customer confirmed accurate sampled touch; app-only |
 | 2.8-inch pair, black / one DDC read failure | Unresolved; later SSH timeout prevented further confirmation |
 | 480×480 units before 2.8-inch identification | Resolution observed, size/touch not conclusively associated; not promoted to another product |
+| Round SBS 960×480 at ~62.825Hz | Buyer confirmed complete, different flight pictures and changing data |
+| Square SBS with one dark panel | Buyer confirmed both returned after reconnecting; cable/power cause not isolated |
+| Mixing 480×480 clone with 960×480 SBS | Match the actual input/layout; not an EDID repair |
+| Square copy at ~62.811Hz | v 0.10.1 accepted input and looped; physical result pending |
+| Round copy at ~71.295Hz | v0.10.2 accepted preferred input, frames advanced; physical result pending |
+| New dual kits: touch / Windows | Seller confirmed non-touch; Windows remains unverified |
 
-The early 5.08-inch claim was corrected to 4.0 inches, not treated as a separate tested SKU. No firmware-encryption determination, firmware dump or reflash was completed. Dual mirror/extended applications and other future scene apps were discussed, not qualified as working product scenarios.
+The early 5.08-inch claim was corrected to 4.0 inches, not treated as a separate tested SKU. No firmware-encryption determination, firmware dump or reflash was completed. Dual-panel apps were subsequently implemented and checked on the Pi. Round SBS flight and square SBS reconnection have buyer-confirmed physical results; same-content physical completeness remains unconfirmed. This does not qualify every scene or batch.
 
 [Product index](../README.md) · [Support home](../../README.md)
 
 </details>
+
+Product clarification: the current dual-screen kits are non-touch. Touch models are available in the 2.1-inch and 2.8-inch single-screen ranges; availability alone is not touch acceptance or a size assignment for the dual kits.

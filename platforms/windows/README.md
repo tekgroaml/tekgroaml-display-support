@@ -12,6 +12,16 @@ Start here before installing drivers or running scripts. These are things to try
 
 If a slight movement repeatedly causes the problem, replace the cable first. It is not a reason to start changing display firmware.
 
+## A two-panel kit appears as one display, or cannot show separate content
+
+One logical display can be normal for two panels driven by one HDMI board. A hardware-copy board sends one picture to both; an SBS board sends half a double-width picture to each. Windows Duplicate/Extend changes host outputs, not the board's internal mapping.
+
+1. Check the product instructions for same/different content and whether one or two HDMI cables are used.
+2. Select only an actually offered input matching the board. Do not force 960×480 onto a 480×480 board. A normal full-screen window does not guarantee two complete SBS panel views.
+3. For one dark panel, wait, reconnect HDMI/USB power and compare cables and rated supplies first. A complete screenshot does not prove both panels received the signal.
+
+[Provisional dual-screen records](../../product-support/_unconfirmed/README.md) contain Pi-side evidence, not a Windows driver or completed Windows acceptance. Approximately 71.295Hz is a particular advertised input, not a universal target. Do not force Windows rates to pass a Pi demo check.
+
 ## It still has no picture, flickers, or looks the wrong size
 
 1. Right-click the desktop → **Display settings** → **Identify**. Select the small screen.

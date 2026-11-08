@@ -12,6 +12,8 @@
 - **触摸没反应，或跑到另一屏？**触摸款的USB供电／触摸数据线要插到**正在输出画面的同一台电脑或树莓派上**，不是只插充电头。每块屏的HDMI与USB成组核对，纯充电线不能传触摸。
 - **用Windows？**先看[Windows画面及触摸操作](platforms/windows/README.zh-CN.md)，本仓库的树莓派命令不能在Windows运行。
 
+**产品选项已确认：**当前双屏套装都不带触摸；2.1英寸和2.8英寸单屏系列均有触摸型号。2.1英寸的分辨率及专属测试结果尚未记录；有触摸型号不等于已完成触摸验收。此前2.8英寸黑屏双屏记录尚未与具体触摸／非触摸SKU对应。
+
 | 产品 | 中文FAQ | English FAQ |
 | --- | --- | --- |
 | 2.8英寸480×480，触摸属性待确认 | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) |
@@ -19,6 +21,12 @@
 | 4.0英寸720×720触摸屏 | [中文](product-support/4.0inch-720x720-touch/README.zh-CN.md) | [English](product-support/4.0inch-720x720-touch/README.md) |
 | 6.2英寸360×960切割触摸屏 | [中文](product-support/6.2inch-360x960-touch/README.zh-CN.md) | [English](product-support/6.2inch-360x960-touch/README.md) |
 | 6.2英寸360×960切割非触摸屏 | [中文](product-support/6.2inch-360x960-nontouch/README.zh-CN.md) | [English](product-support/6.2inch-360x960-nontouch/README.md) |
+
+## 尺寸与触摸属性待确认的双屏记录
+
+[按形状与同显／异显查看](product-support/_unconfirmed/README.zh-CN.md)：圆形异显、方形异显、圆形同显、方形同显。新增问题包括只有一块显示、换屏后演示停止、480×480与960×480输入混用，以及应用未接受实际上报的约62.811／71.295Hz。
+
+这些是待核对的连接样本，不是已确认的新SKU，不插入上方按英寸升序的产品表，也不归到2.8英寸款。Windows与树莓派分别说明；刷新率兼容更新只改变应用接受范围，没有改屏幕时序。
 
 ## 会用 GPT 或 Claude？让 AI 帮你一起搞定
 
