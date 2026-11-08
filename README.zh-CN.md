@@ -20,6 +20,20 @@
 | 6.2英寸360×960切割触摸屏 | [中文](product-support/6.2inch-360x960-touch/README.zh-CN.md) | [English](product-support/6.2inch-360x960-touch/README.md) |
 | 6.2英寸360×960切割非触摸屏 | [中文](product-support/6.2inch-360x960-nontouch/README.zh-CN.md) | [English](product-support/6.2inch-360x960-nontouch/README.md) |
 
+## 会用 GPT 或 Claude？让 AI 帮你一起搞定
+
+把这份文档、配套测试工具，以及想体验的场景仓库下载下来，交给你常用的 AI。接下来，**把你想做的事告诉它，向 AI“许愿”就好**。如果 AI 能读取项目并操作你的电脑或树莓派，它就可以帮你检查设置、执行测试、部署支持的演示场景。
+
+- [产品文档与FAQ](https://github.com/tekgroaml/tekgroaml-display-support)
+- [屏幕配置与测试工具](https://github.com/tekgroaml/tekgroaml-pi-display-tools)
+- [圆屏 Home Assistant 场景演示](https://github.com/tekgroaml/round-screen-homeassistant-kiosk)
+
+可以直接这样说：
+
+> 请先阅读这些仓库。我有一块[尺寸／分辨率／是否触摸]屏幕，连接的是[Windows电脑／树莓派]。我想[修好显示／测试触摸／运行某个演示]。请先检查接线和支持范围，再一步步帮我完成；修改设置时保留恢复方法。
+
+告诉它屏幕型号、HDMI和USB怎么接，以及现在看到的现象。普通聊天AI可以指导你操作；直接执行命令需要使用带操作工具的AI，并由你提供访问权限。接线或硬件故障仍可能需要你动手检查，或联系我们协助。树莓派脚本不能直接在Windows运行。
+
 各产品包含黑屏／闪烁、触摸问题及切割屏补偿三类内容，并区分已验证与未解决问题。输入分辨率与物理可见区域分开记录，未知规格不通过控制器名称推断。
 
 - [通用流程与全部测试场景](product-support/_shared/README.zh-CN.md)

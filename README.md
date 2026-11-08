@@ -20,6 +20,20 @@ Start with the symptom you can observe: **no picture or flicker**, **touch missi
 | 6.2-inch 360×960 cut-panel touchscreen | [English](product-support/6.2inch-360x960-touch/README.md) | [中文](product-support/6.2inch-360x960-touch/README.zh-CN.md) |
 | 6.2-inch 360×960 cut panel, non-touch | [English](product-support/6.2inch-360x960-nontouch/README.md) | [中文](product-support/6.2inch-360x960-nontouch/README.zh-CN.md) |
 
+## Prefer to let AI help?
+
+If you use GPT or Claude, download this guide, the matching display tools and any demo you want to try. Then tell your AI what you want: **make a wish, and let AI help with the steps.** With access to the project files and your computer or Raspberry Pi, a capable AI assistant can help inspect settings, run tests and set up a supported demo.
+
+- [Product guides and FAQs](https://github.com/tekgroaml/tekgroaml-display-support)
+- [Display configuration and test tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools)
+- [Round-screen Home Assistant kiosk demo](https://github.com/tekgroaml/round-screen-homeassistant-kiosk)
+
+For example, tell it:
+
+> Please read these repositories first. I have a [size/resolution/touch option] screen connected to [Windows / Raspberry Pi]. I want to [fix the picture / test touch / run a demo]. Check the connections and supported options first, then help me step by step. Keep a way to restore settings when making changes.
+
+Tell the AI your screen model, how HDMI and USB are connected, and what you see. If it can only chat, it can guide you through the steps; running commands requires a tool-enabled assistant with access you grant. Physical connection or hardware faults may still need hands-on checks or our support. Raspberry Pi scripts are not Windows programs.
+
 The product pages cover no picture/flicker, touch issues and cut-panel compensation, including verified results and unresolved cases. EDID input modes are separated from physical visible resolution. Unknown specifications are marked rather than inferred from controller names.
 
 - [Shared procedures and all tested scenarios](product-support/_shared/README.md)
