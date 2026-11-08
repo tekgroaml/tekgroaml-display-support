@@ -29,3 +29,5 @@ The product pages cover no picture/flicker, touch issues and cut-panel compensat
 - [Publishing notes](PUBLISHING.md)
 
 The cut-panel workaround is currently application-level; it does not claim whole-desktop or boot-time compensation. Historical product/package links are retained under the product directory. Documentation can be downloaded independently of the tools repository.
+
+- [Maintainers: Writing requirements for buyer-facing FAQs](docs/WRITING-GUIDELINES.md)

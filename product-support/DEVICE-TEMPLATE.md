@@ -1,65 +1,62 @@
-> 买家页顺序：一句话确认产品 → 按现象描述问题 → 处理步骤与通过标准 → 未解决时需要提供的信息 → 文末可展开产品参数、原因及测试记录。以下字段用于技术详情，不应整段放在买家页开头。
+# Buyer product FAQ template (for maintainers)
 
-> 当前产品文档按两份生成：`README.md`默认英文、`README.zh-CN.md`中文，顶部分别互链。以下中文字段模板供维护者填写，不能直接当成客户修复步骤。
+**English** | [简体中文](DEVICE-TEMPLATE.zh-CN.md)
 
-# 产品识别名：尺寸＋分辨率＋形状/触摸类型
+Read the [writing requirements](../docs/WRITING-GUIDELINES.md) first. This is a template, not an executable repair guide. Create English `README.md` and Chinese `README.zh-CN.md` in the product directory after replacing and verifying every placeholder.
 
-> 此文件是维护者模板，不是可执行的客户修复方案。替换全部占位项、完成验证后才发布具体产品条目。
+## Buyer-page structure
 
-## 产品基本信息
+```markdown
+# Size + advertised resolution + touch option
 
-| 字段 | 内容 |
+**English** | [简体中文](README.zh-CN.md)
+
+One sentence identifying the product and asking the buyer to check their order.
+
+## A symptom the buyer can see
+
+One sentence saying when it happens and what appears.
+
+1. Start with waiting, reconnecting and checking the host/USB cable.
+2. Then offer built-in OS settings; separate Windows from Raspberry Pi.
+3. Explain what a successful result looks like.
+
+If unresolved: request the necessary photo, wiring and computer details.
+
+## Optional: Raspberry Pi instructions
+
+<details>
+<summary>Show Raspberry Pi steps (not Windows)</summary>
+
+Give platform/version, execution location, effects, verified commands and recovery.
+
+</details>
+
+## Technical details and test records
+
+<details>
+<summary>Show product data, explanation and validation limits</summary>
+
+Complete the technical fields below; keep them out of the page opening.
+
+</details>
+```
+
+For cable-movement blackouts, wait briefly before reconnecting. For touch faults, first check that the USB power/touch data cable reaches the same host sending video. Follow the writing requirements; do not fill a template with guessed commands.
+
+## Technical information checklist
+
+| Area | Record |
 | --- | --- |
-| 客户识别名 | 待填写 |
-| 尺寸 | 待确认，以标签/厂家规格为依据 |
-| 分辨率 | 区分商品标称、面板原生、EDID上报和验证输入模式 |
-| 形状/触摸类型 | 待填写 |
-| SKU/ASIN/厂家料号/批次 | 未取得时写待确认，不编造 |
-| 已测试系统 | 待填写 |
+| Product | Size, advertised/visible/native/input resolutions separately; shape and touch; confirmed SKU/ASIN/part/revision or unknown |
+| Environment | Host, OS, desktop and tool version actually tested |
+| Reported data | EDID name/identity/length/checksum, preferred mode, pixel clock, complete timings/polarity; touch USB name/VID/PID if applicable |
+| Symptom/cause | Exact visible issue and trigger; distinguish confirmed cause from hypothesis |
+| Repair | Before/after values and evidence; host-only vs monitor firmware changes |
+| Script | Existing profile/filename and alias, version, temporary/save/recovery steps, unsupported variants |
+| Cut panel | Measured visible window, logical canvas and input transform; app/global/boot scope separately |
+| Acceptance | Physical picture, borders, colors, sampled touch, restart, cold boot, other batches; mark untested/unresolved |
 
-## 驱动上报数据
+Include no invented product fields, commands or promises. Cover no-picture/flicker, touch response and cut-panel cases only as applicable. A five-point pass is not full-screen or multitouch qualification.
 
-| 字段 | 原始数据 |
-| --- | --- |
-| EDID厂商/名称与产品标识 | 待读取 |
-| EDID长度及校验 | 待读取 |
-| 首选模式及刷新率 | 待读取 |
-| 像素时钟 | 待读取 |
-| 水平有效像素/前沿/同步/后沿 | 待读取 |
-| 垂直有效像素/前沿/同步/后沿 | 待读取 |
-| 同步极性 | 待读取 |
-| USB触摸名称及VID/PID | 无触摸时写不适用 |
-
-## 简述问题
-
-待填写症状、影响范围和触发条件。把无信号、亮度闪动、画面错位和触摸串屏分别描述。
-
-## 修复数据
-
-| 参数 | 修复前 | 修复后 | 验证依据 |
-| --- | --- | --- | --- |
-| 待填写 | 待填写 | 待填写 | 待验证 |
-
-哪些字段保持不变、是否只改主机配置、是否修改屏幕固件，需要明确写出。
-
-## 修复脚本
-
-- 正式文件名：`尺寸inch-宽x高-目标刷新率hz-驱动标识.sh`（占位，不能执行）。
-- 配置ID：同名去掉`.sh`。
-- 最低应用版本：待确认。
-- 临时、保存、恢复步骤：待实现验证后填写。
-- 未验证/失败变体：待填写。
-
-## 验收状态
-
-分别写明实体画面、颜色测试、触摸定位、重启/冷启动、不同批次的已通过项与未验证项。
-
-[命名规范](NAMING.md) · [产品目录](README.md)
-
-## 三类处理及状态
-
-1. 黑屏／闪烁：明确已证明的EDID／时序原因，其他电源及DDC故障不能一概归因EDID。
-2. 触摸无响应／串屏／偏移：写单屏、同款双屏、异款双屏、触摸＋非触摸及固定USB配对适用性。
-3. 切割屏：写输入宽高、可见区域坐标、内容布局、触摸变换公式；不适用则明确写不适用。
-
-每项说明实测成功、未解决、未验证及回退方式；临时应用不等于全桌面／开机配置。
+[Naming policy](NAMING.md) · [Product directory](README.md) · [Writing requirements](../docs/WRITING-GUIDELINES.md)

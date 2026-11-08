@@ -1,5 +1,7 @@
 # GitHub 发布说明
 
+文案维护先遵循[文档书写要求](docs/文档书写要求.md)／[English writing requirements](docs/WRITING-GUIDELINES.md)，使用[买家页模板](product-support/DEVICE-TEMPLATE.md)。Git commit信息统一使用英文。
+
 仓库：[tekgroaml/tekgroaml-display-support](https://github.com/tekgroaml/tekgroaml-display-support)。
 
 建议Description：`Setup guides, FAQs, and troubleshooting for HDMI USB touch displays.`
