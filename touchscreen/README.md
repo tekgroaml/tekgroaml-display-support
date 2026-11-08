@@ -1,5 +1,7 @@
 # 触摸屏售后 FAQ
 
+**Product FAQ / 按产品查找：** [English](../product-support/README.md) | [简体中文](../product-support/README.zh-CN.md)。
+
 更新日期：2026-10-25。
 
 本组资料适用于本项目涉及的 **HDMI 视频＋USB 触摸数据** 显示屏，覆盖有画面但无法触摸、多块相同型号屏幕串屏、不同型号屏幕混用、触摸偏移及换口后失效。屏幕供电电压、接口位置和支持系统，仍以具体SKU的说明书和实测记录为准。

@@ -1,5 +1,7 @@
 # HDMI Touchscreen: Customer FAQ
 
+**Product-specific instructions:** start with the [English product directory](../../product-support/README.md), especially for the 360×960 cut panel. [中文产品目录](../../product-support/README.zh-CN.md).
+
 For displays that use **HDMI for video and USB for touch data**. Follow the wiring diagram, power requirements and supported operating systems for your specific model. A connector that looks the same may have a different function.
 
 ## Start with these checks

@@ -1,5 +1,7 @@
 # HDMI 触摸屏：客户常见问题
 
+**按产品排障：**优先查看[中文产品目录](../../product-support/README.zh-CN.md)，尤其是360×960切割屏。[English product index](../../product-support/README.md)。
+
 适用范围：使用HDMI传输画面、使用USB传输触摸数据的屏幕。不同产品的供电和接口可能不同，请以购买型号的接线图为准。以下操作不会要求提供Wi-Fi密码、电脑密码或远程登录密码。
 
 ## 先做这四项检查

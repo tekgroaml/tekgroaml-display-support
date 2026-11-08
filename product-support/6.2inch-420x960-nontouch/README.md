@@ -1,35 +1,7 @@
-# 6.2英寸 420×960 长条非触摸屏（问题待解决）
+# This product entry has moved / 产品条目已迁移
 
-## 产品基本信息
+[English product FAQ](../6.2inch-360x960-nontouch/README.md) | [中文产品FAQ](../6.2inch-360x960-nontouch/README.zh-CN.md)
 
-- 客户识别名：**6.2英寸 420×960 长条非触摸屏**。
-- 尺寸：6.2英寸；420×960为驱动板上报模式，面板原生规格仍待厂家核对。
-- 类型：HDMI视频，无触摸；USB连接可能只负责供电，不能因此当作触摸设备。
-- SKU/厂家料号/批次：待确认。
+The customer lookup resolution is now 360×960 (cut-panel visible area). The historical 420×960 directory referred to HDMI input, not a separate product. The existing timing profile name is unchanged. A 60Hz timing correction alone does not repair the visible-window crop; non-touch brightness pulsing remains unresolved. See the current product page for evidence and limits.
 
-## 驱动上报数据
-
-| 字段 | 当前样机数据 |
-| --- | --- |
-| 名称 | LTM / ZL480 |
-| 厂商/产品标识 | 328d5e04 |
-| EDID | 256字节、1个扩展块，与触摸样机相同 |
-| 原始首选模式 | 420×960、28MHz、约51.851852Hz |
-| 水平前沿/同步/后沿 | 50 / 20 / 50 |
-| 垂直前沿/同步/后沿 | 16 / 4 / 20 |
-
-## 简述问题
-
-画面位置稳定，但亮度一明一暗。样机由树莓派USB口供电；主机无欠压记录，仍不能据此排除屏幕端供电不稳。
-
-## 已试参数与结果
-
-420×960、32.4MHz、60Hz未解决此样机问题，已撤回临时修正。该结果与触摸样机不同，即使EDID相同也不能合并为一个已修复条目。
-
-## 修复脚本
-
-**尚无已验证修复脚本。** 不向此条目分配触摸屏的正式脚本，也不生成一个看似已修复的空脚本。
-
-下一步按额定供电规格做独立电源对照，保留HDMI线及显示参数不变；再结合厂家时序、料号和已知好主机进行排查。未完成的验证不描述为已经解决。
-
-[触摸变体的独立条目](../6.2inch-420x960-touch/README.md) · [产品目录](../README.md)
+客户条目现按360×960切割后可见区域命名；历史420×960表示HDMI输入，不是另一款商品。时序配置ID保持兼容。仅修正60Hz不能修复可见窗口裁切，非触摸款亮度闪动仍未解决。以新版中英文产品FAQ为准。

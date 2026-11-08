@@ -1,47 +1,23 @@
-# TEKGROAML Display Support / 显示屏支持中心
+# TEKGROAML Display Support
 
-GitHub仓库：[tekgroaml-display-support](https://github.com/tekgroaml/tekgroaml-display-support)。按主题和使用对象整理客户文档、支持人员资料及产品专项配置。此仓库可以单独下载，不依赖电脑上另一个项目的目录位置。
+**English** | [简体中文](README.zh-CN.md)
 
-| 分类 | 内容 | 入口 |
+Find your screen by **size – resolution – touch capability** in the [product FAQ directory](product-support/README.md). Each current product has a separate English FAQ and Chinese FAQ with reciprocal language links. Updated 2026-11-08.
+
+| Product | English FAQ | 中文FAQ |
 | --- | --- | --- |
-| 触摸屏客户指南 | 中英文常见问题：触摸无响应、相同/不同型号多屏、串屏与偏移 | [触摸屏目录](touchscreen/README.md) |
-| 触摸屏卖家支持 | 排障SOP、客服回复和商品说明模板 | [卖家资料](touchscreen/seller/触摸屏-卖家排障SOP-CN.md) |
-| 产品专项支持 | 4英寸720×720、6.2英寸长条触摸样机的配置与限制 | [产品支持目录](product-support/README.md) |
+| 4.0-inch 720×720 touchscreen | [English](product-support/4.0inch-720x720-touch/README.md) | [中文](product-support/4.0inch-720x720-touch/README.zh-CN.md) |
+| 3.4-inch 800×800 touchscreen | [English](product-support/3.4inch-800x800-touch/README.md) | [中文](product-support/3.4inch-800x800-touch/README.zh-CN.md) |
+| 6.2-inch 360×960 cut-panel touchscreen | [English](product-support/6.2inch-360x960-touch/README.md) | [中文](product-support/6.2inch-360x960-touch/README.zh-CN.md) |
+| 6.2-inch 360×960 cut panel, non-touch | [English](product-support/6.2inch-360x960-nontouch/README.md) | [中文](product-support/6.2inch-360x960-nontouch/README.zh-CN.md) |
+| 2.8-inch 480×480, touch status unconfirmed | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) |
 
-```text
-FAQ/
-├── README.md
-├── touchscreen/
-│   ├── README.md
-│   ├── customer/
-│   │   ├── 触摸屏-客户常见问题-CN.md
-│   │   └── Touchscreen-Customer-FAQ-EN.md
-│   └── seller/
-│       ├── 触摸屏-卖家排障SOP-CN.md
-│       └── 触摸屏-客服回复与商品说明-CN-EN.md
-└── product-support/
-    ├── README.md
-    ├── NAMING.md
-    ├── DEVICE-TEMPLATE.md
-    ├── 4.0inch-720x720-touch/
-    ├── 6.2inch-420x960-nontouch/
-    ├── 6.2inch-420x960-touch/
-    │   ├── README.md
-    │   ├── customer/
-    │   └── seller/
-    └── 4inch-720x720-RaspberryPi-support-20261024/
-        ├── SELLER_NOTES_CN.md
-        ├── VALIDATION.txt
-        ├── 4inch-720x720-RaspberryPi-customer-support.zip
-        └── raspberry-pi-720-touchscreen-setup/
-```
+The product pages cover no picture/flicker, touch issues and cut-panel compensation, including verified results and unresolved cases. EDID input modes are separated from physical visible resolution. Unknown specifications are marked rather than inferred from controller names.
 
-程序代码、安装卸载脚本及工具命令说明位于[TEKGROAML Pi Display Tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools)。
+- [Shared procedures and all tested scenarios](product-support/_shared/README.md)
+- [General touchscreen customer FAQ](touchscreen/customer/Touchscreen-Customer-FAQ-EN.md)
+- [Seller support materials](touchscreen/README.md)
+- [Display tools and installation](https://github.com/tekgroaml/tekgroaml-pi-display-tools)
+- [Publishing notes](PUBLISHING.md)
 
-新增FAQ请放入对应主题目录；客户说明放在`customer`，内部排障资料放在`seller`，某一SKU专用配置放在`product-support`。
-
-## Related tool / 配套工具
-
-显示配置、颜色测试和触摸测试工具：[TEKGROAML Pi Display Tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools)。本仓库可独立下载；维护信息见[发布说明](PUBLISHING.md)。
-
-English customers: start with the [Touchscreen FAQ](touchscreen/customer/Touchscreen-Customer-FAQ-EN.md). Product-specific setup packages are under [product-support](product-support/README.md).
+The cut-panel workaround is currently application-level; it does not claim whole-desktop or boot-time compensation. Historical product/package links are retained under the product directory. Documentation can be downloaded independently of the tools repository.

@@ -1,36 +1,31 @@
-# 产品专项支持资料
+# Product FAQ directory
 
-本目录收纳具体产品的兼容配置与实测记录，不作为所有屏幕通用的驱动或修复方案。
+**English** | [简体中文](README.zh-CN.md)
 
-## 按产品查找
+Updated / 更新：2026-11-08。
 
-| 客户识别名称 | 状态 | 正式修复脚本 |
-| --- | --- | --- |
-| [4.0英寸 720×720 方形触摸屏](4.0inch-720x720-touch/README.md) | 已验证样机修正参数 | `4.0inch-720x720-60hz-wks-lontium-semi.sh` |
-| [6.2英寸 420×960 长条触摸屏](6.2inch-420x960-touch/README.md) | 已验证触摸样机输入模式，厂家原生规格待核对 | `6.2inch-420x960-60hz-ltm-zl480.sh` |
-| [6.2英寸 420×960 长条非触摸屏](6.2inch-420x960-nontouch/README.md) | 亮度闪动问题待解决 | 无已验证脚本 |
+Find an item by size, advertised resolution and touch capability. Each product has separate English and Chinese pages; English is the default. The 6.2-inch product uses 360×960 visible pixels; 420×960 is its HDMI input, not its customer lookup resolution. Unknown touch status is explicitly marked.
 
-每个条目按“基本信息 → 驱动上报数据 → 简述问题 → 修复数据 → 修复脚本 → 验收限制”组织。客户先核对尺寸、分辨率及触摸类型，再核对驱动数据。命名细则见[规范](NAMING.md)，新增产品参考[模板](DEVICE-TEMPLATE.md)。
+| Product | Recorded status |
+| --- | --- |
+| [4.0-inch 720×720 touchscreen](4.0inch-720x720-touch/README.md) | Timing fix and touch verified on the sample. |
+| [3.4-inch 800×800 touchscreen](3.4inch-800x800-touch/README.md) | 800×800 at 60Hz visually confirmed stable; exact timing dump not retained. |
+| [6.2-inch 360×960 cut-panel touchscreen](6.2inch-360x960-touch/README.md) | Visible-window and touch compensation confirmed in a temporary application. |
+| [6.2-inch 360×960 cut panel, non-touch](6.2inch-360x960-nontouch/README.md) | Brightness pulsing unresolved; touch-sample compensation not validated here. |
+| [2.8-inch 480×480, touch status unconfirmed](2.8inch-480x480-touch-unconfirmed/README.md) | Both reported black; one EDID readable, the other failed DDC reads. Unresolved. |
 
-## 6.2英寸 420×960 长条触摸屏
+## Three issue categories
 
-- [产品支持索引与适用限制](6.2inch-420x960-touch/README.md)
-- [中文使用与闪烁处理](6.2inch-420x960-touch/customer/使用与闪烁处理-CN.md)
-- [English setup and flicker guide](6.2inch-420x960-touch/customer/Setup-and-Flicker-EN.md)
-- [卖家验证与批次验收](6.2inch-420x960-touch/seller/适用范围与验收-CN.md)
+1. No picture / flicker: a known EDID or timing fix applies only to matched samples; power, cable and DDC faults need separate checks.
+2. Touch missing / wrong display / offset: verify USB data, fixed cable pairing, unique input names and coordinate mapping.
+3. Cut panels: distinguish input resolution from the visible window and pair display compensation with touch compensation.
 
-需要工具2.3.0的`6.2inch-420x960-60hz-ltm-zl480`档并显式确认；仅在已确认触摸样机上有成功结果。非触摸样机同参仍异常，不按EDID相同就宣布适用。厂家正式型号与原生分辨率仍待核对。
+[Shared procedures and all tested scenarios](_shared/README.md) · [Naming policy](NAMING.md) · [New product template](DEVICE-TEMPLATE.md)
 
-## 历史资料：4.0英寸 720×720 专项支持包
+## Historical entries
 
-优先查看[新版统一产品条目](4.0inch-720x720-touch/README.md)。以下为2026-10-24旧包，原始文件名和程序保留供历史支持；不要与新版统一工具重复启用。
+`6.2inch-420x960-touch` and `6.2inch-420x960-nontouch` retain old links and direct readers to the new 360×960 pages. They are not extra products. The historical repair profile ID remains unchanged and does not implement cut-window compensation.
 
-- [中文安装说明](4inch-720x720-RaspberryPi-support-20261024/raspberry-pi-720-touchscreen-setup/QUICK_START_CN.md)
-- [English setup guide](4inch-720x720-RaspberryPi-support-20261024/raspberry-pi-720-touchscreen-setup/QUICK_START_EN.md)
-- [卖家交付说明](4inch-720x720-RaspberryPi-support-20261024/SELLER_NOTES_CN.md)
-- [验证记录](4inch-720x720-RaspberryPi-support-20261024/VALIDATION.txt)
-- [客户配置包ZIP](4inch-720x720-RaspberryPi-support-20261024/4inch-720x720-RaspberryPi-customer-support.zip)
+[Archived 2026-10-24 720 setup package](4inch-720x720-RaspberryPi-support-20261024/raspberry-pi-720-touchscreen-setup/QUICK_START_EN.md) is for legacy support; do not enable it alongside the modern tool. Earlier 480×480 screens with unconfirmed size are not invented as additional SKUs; the initial 5.08-inch claim was corrected to 4.0 inches.
 
-该配置包处理已知720×720显示时序，不能作为通用触摸映射工具。触摸无响应及双屏串屏请先查看[触摸屏FAQ](../touchscreen/README.md)。
-
-[返回FAQ总目录](../README.md)
+[Support home](../README.md)
