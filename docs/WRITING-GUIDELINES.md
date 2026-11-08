@@ -116,3 +116,7 @@ One sample does not qualify every batch. Do not transfer touch-model results to 
 Documentation normally needs content/link review. Attached programs need appropriate syntax, launch or behavior checks, with unfinished physical acceptance clearly recorded.
 
 [Buyer-page template](../product-support/DEVICE-TEMPLATE.md) · [Product naming](../product-support/NAMING.md) · [Publishing notes](../PUBLISHING.md)
+
+## AI repository entry
+
+[AGENTS.md](../AGENTS.md) requires AI contributors to read these full requirements before editing buyer documentation. [CLAUDE.md](../CLAUDE.md) points Claude Code to the same entry. Keep English and Chinese requirements equivalent when updating this policy. Repository discovery is tool-dependent; if not supported, explicitly ask the assistant to read `AGENTS.md`. These files do not give a chat access to local files or grant permission to publish or change hardware.

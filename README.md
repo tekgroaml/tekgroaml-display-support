@@ -45,3 +45,7 @@ The product pages cover no picture/flicker, touch issues and cut-panel compensat
 The cut-panel workaround is currently application-level; it does not claim whole-desktop or boot-time compensation. Historical product/package links are retained under the product directory. Documentation can be downloaded independently of the tools repository.
 
 - [Maintainers: Writing requirements for buyer-facing FAQs](docs/WRITING-GUIDELINES.md)
+
+## For AI contributors
+
+Start with [AGENTS.md](AGENTS.md). Before editing FAQs, read the full [English writing requirements](docs/WRITING-GUIDELINES.md) or [Chinese writing requirements](docs/文档书写要求.md), and keep both buyer languages consistent. [CLAUDE.md](CLAUDE.md) provides a Claude Code entry to the same instructions. Automatic discovery depends on the AI tool; if it does not load repository instructions, ask it explicitly to read `AGENTS.md` first. An ordinary chat cannot read local files unless you provide them or grant tools access.
