@@ -2,6 +2,8 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
+**Download the complete bilingual FAQ:** [PDF - English first, Chinese follows](output/pdf/tekgroaml-display-support-faq.pdf). Includes the home-page introduction, Windows checks, product FAQs and dual-screen examples, with a clickable GitHub home link on the cover.
+
 Find your screen by **size – resolution – touch capability** in the [product FAQ directory](product-support/README.md). Each current product has a separate English FAQ and Chinese FAQ with reciprocal language links. Updated 2026-11-08.
 
 Start with the symptom you can observe: **no picture or flicker**, **touch missing or inaccurate**, or **part of the image missing**. Open your product below for steps to try. Technical data is available at the end of each FAQ.

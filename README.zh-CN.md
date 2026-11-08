@@ -2,6 +2,8 @@
 
 [English](README.md) | **简体中文**
 
+**下载双语FAQ总册：**[PDF - 英文在前，中文在后](output/pdf/tekgroaml-display-support-faq.pdf)。包含首页说明、Windows操作、产品排障及双屏场景，封面靠前位置提供可点击的GitHub首页地址。
+
 按**尺寸－分辨率－是否触摸**进入[产品FAQ目录](product-support/README.zh-CN.md)。每款独立提供英文、中文，互有语言切换链接；默认入口英文。更新：2026-11-08。
 
 先从你看到的现象开始：**黑屏或闪烁**、**触摸没反应或不准**、**画面显示不完整**。进入对应产品后先看处理步骤，详细参数在各FAQ末尾。
