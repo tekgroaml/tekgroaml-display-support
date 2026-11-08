@@ -6,11 +6,11 @@ Find your screen by **size – resolution – touch capability** in the [product
 
 | Product | English FAQ | 中文FAQ |
 | --- | --- | --- |
-| 4.0-inch 720×720 touchscreen | [English](product-support/4.0inch-720x720-touch/README.md) | [中文](product-support/4.0inch-720x720-touch/README.zh-CN.md) |
+| 2.8-inch 480×480, touch status unconfirmed | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) |
 | 3.4-inch 800×800 touchscreen | [English](product-support/3.4inch-800x800-touch/README.md) | [中文](product-support/3.4inch-800x800-touch/README.zh-CN.md) |
+| 4.0-inch 720×720 touchscreen | [English](product-support/4.0inch-720x720-touch/README.md) | [中文](product-support/4.0inch-720x720-touch/README.zh-CN.md) |
 | 6.2-inch 360×960 cut-panel touchscreen | [English](product-support/6.2inch-360x960-touch/README.md) | [中文](product-support/6.2inch-360x960-touch/README.zh-CN.md) |
 | 6.2-inch 360×960 cut panel, non-touch | [English](product-support/6.2inch-360x960-nontouch/README.md) | [中文](product-support/6.2inch-360x960-nontouch/README.zh-CN.md) |
-| 2.8-inch 480×480, touch status unconfirmed | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) |
 
 The product pages cover no picture/flicker, touch issues and cut-panel compensation, including verified results and unresolved cases. EDID input modes are separated from physical visible resolution. Unknown specifications are marked rather than inferred from controller names.
 

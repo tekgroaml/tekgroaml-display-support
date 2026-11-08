@@ -8,11 +8,11 @@ Find an item by size, advertised resolution and touch capability. Each product h
 
 | Product | Recorded status |
 | --- | --- |
-| [4.0-inch 720×720 touchscreen](4.0inch-720x720-touch/README.md) | Timing fix and touch verified on the sample. |
+| [2.8-inch 480×480, touch status unconfirmed](2.8inch-480x480-touch-unconfirmed/README.md) | Both reported black; one EDID readable, the other failed DDC reads. Unresolved. |
 | [3.4-inch 800×800 touchscreen](3.4inch-800x800-touch/README.md) | 800×800 at 60Hz visually confirmed stable; exact timing dump not retained. |
+| [4.0-inch 720×720 touchscreen](4.0inch-720x720-touch/README.md) | Timing fix and touch verified on the sample. |
 | [6.2-inch 360×960 cut-panel touchscreen](6.2inch-360x960-touch/README.md) | Visible-window and touch compensation confirmed in a temporary application. |
 | [6.2-inch 360×960 cut panel, non-touch](6.2inch-360x960-nontouch/README.md) | Brightness pulsing unresolved; touch-sample compensation not validated here. |
-| [2.8-inch 480×480, touch status unconfirmed](2.8inch-480x480-touch-unconfirmed/README.md) | Both reported black; one EDID readable, the other failed DDC reads. Unresolved. |
 
 ## Three issue categories
 
