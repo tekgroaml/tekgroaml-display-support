@@ -2,7 +2,34 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-For the non-touch 6.2-inch strip display sold as 360×960. It can display test patterns but cannot respond to finger input. A complete repair for the tested brightness-pulsing sample has not yet been confirmed.
+Please check the size, resolution and touch option on your order. Start with the simple checks below; no commands are needed.
+
+## The screen goes black or flickers after a cable is moved
+
+- Leave the cables still and wait about 10–15 seconds for the picture to return.
+- If it stays black, unplug and firmly reconnect HDMI and the USB power connection. Check both ends.
+- Try another cable and test one screen at a time. Use the power supply specified for your screen.
+
+If this happens every time a cable moves, try replacing that cable. If the screen never lights up, follow the same connection checks first.
+
+## Tapping the screen does nothing
+
+This is the non-touch version, so that is expected. If a second touchscreen controls this screen, check that the other screen's HDMI and USB cables go to the same computer, then set its touch screen in Windows as described below.
+
+## What can I try in Windows?
+
+Right-click the desktop and open **Display settings**. Select this screen, use its listed resolution and choose **Extend these displays** if you want separate screens. For flicker, open **Advanced display** and try 60Hz only if it is available for that screen.
+
+[Windows steps with more detail](../../platforms/windows/README.md). The commands in the optional Raspberry Pi section below do **not** run on Windows.
+
+## The screen keeps getting brighter and darker, or an edge is missing
+
+Please send us a short video and your power connection details. The tested non-touch sample still had this issue after a 60Hz trial; we do not have a confirmed software fix for it. The touch version’s cut-screen workaround has not been confirmed for this version.
+
+## Optional: Raspberry Pi instructions
+
+<details>
+<summary>Show Raspberry Pi commands (not for Windows)</summary>
 
 Commands below run on the Raspberry Pi after installing the [display tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools). Use version 2.3.2+ for rectangular touch tests. Examples select connector 1 (`HDMI-A-1`, board HDMI0); replace 1 with 2 for connector 2 (board HDMI1). Run screen tests as the desktop user, without sudo.
 
@@ -45,6 +72,8 @@ screen-test pattern --screen 1
 ```
 
 If it remains black, check power, backlight and screen detection before trying timing changes. Report any `Remote I/O error` to support with the connection details.
+
+</details>
 
 ## Technical details and test records
 

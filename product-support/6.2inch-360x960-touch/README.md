@@ -2,7 +2,41 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-For the 6.2-inch strip touchscreen sold as 360×960. The tested cut-glass sample needs a special visible-area layout. The workaround below fixes one test application; it is not a whole-desktop driver or a permanent screen-firmware update.
+Please check the size, resolution and touch option on your order. Start with the simple checks below; no commands are needed.
+
+## The screen goes black or flickers after a cable is moved
+
+- Leave the cables still and wait about 10–15 seconds for the picture to return.
+- If it stays black, unplug and firmly reconnect HDMI and the USB power connection. Check both ends.
+- Try another cable and test one screen at a time. Use the power supply specified for your screen.
+
+If this happens every time a cable moves, try replacing that cable. If the screen never lights up, follow the same connection checks first.
+
+## Touch does nothing or controls another screen
+
+- Connect the screen's **USB power/touch cable to the same computer that is sending the picture**. A wall charger can power the screen but cannot send your touches to the computer.
+- Use a USB data cable. A charging-only cable may light the screen without making touch work.
+- With two screens, check each screen's HDMI and USB cable as a pair. Try one screen with its USB cable first, then reconnect the other.
+
+
+## What can I try in Windows?
+
+Right-click the desktop and open **Display settings**. Select this screen, use its listed resolution and choose **Extend these displays** if you want separate screens. For flicker, open **Advanced display** and try 60Hz only if it is available for that screen.
+
+If touch still goes to the wrong screen, search Windows for **Calibrate the screen for pen or touch input**. Open it, choose **Setup**, and follow the prompts to identify the touchscreen. Check the USB connection first.
+
+[Windows steps with more detail](../../platforms/windows/README.md). The commands in the optional Raspberry Pi section below do **not** run on Windows.
+
+## The left side is cut off, or left-side touches miss buttons
+
+This cut-glass sample needs a special picture layout. Changing Windows resolution alone has not been shown to fix it. Please send us a photo showing all four screen edges.
+
+On Raspberry Pi, we confirmed a workaround inside a test app: the full picture became visible and touch lined up. It does not automatically fix Windows, the whole desktop or every app. The optional Raspberry Pi section below explains how to try it.
+
+## Optional: Raspberry Pi instructions
+
+<details>
+<summary>Show Raspberry Pi commands (not for Windows)</summary>
 
 Commands below run on the Raspberry Pi after installing the [display tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools). Use version 2.3.2+ for rectangular touch tests. Examples select connector 1 (`HDMI-A-1`, board HDMI0); replace 1 with 2 for connector 2 (board HDMI1). Run screen tests as the desktop user, without sudo.
 
@@ -51,6 +85,8 @@ Tap the center and all four corner targets. A target should turn green and the w
 3. Inspect stability separately from image completeness. A 60Hz test improved flicker on an earlier touch sample, **but it did not fix the missing left edge**.
 
 The successful cut-window and touch test used approximately 51.85Hz. The combined 60Hz-plus-compensation configuration still needs physical verification. Do not add `--save` on the strength of a stable picture alone.
+
+</details>
 
 ## Technical details and test records
 

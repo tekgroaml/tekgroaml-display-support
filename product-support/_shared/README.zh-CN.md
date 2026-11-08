@@ -2,6 +2,17 @@
 
 [English](README.md) | **简体中文**
 
+## 先别急着改设置
+
+- **碰线后黑屏或闪烁？**先别动线，等约10～15秒；没恢复就拔下HDMI和USB供电线重新插紧。每次碰线都发生，优先换线。
+- **触摸没反应，或跑到另一屏？**触摸款的USB供电／触摸数据线要插到**正在输出画面的同一台电脑或树莓派上**，不是只插充电头。每块屏的HDMI与USB成组核对，纯充电线不能传触摸。
+- **用Windows？**先看[Windows画面及触摸操作](../../platforms/windows/README.zh-CN.md)，本仓库的树莓派命令不能在Windows运行。
+
+## 可选：树莓派命令与支持记录
+
+<details>
+<summary>展开树莓派详细步骤（不适用于Windows）</summary>
+
 更新：2026-11-08。先按[产品目录](../README.zh-CN.md)核对设备。流程对应已测试的树莓派4B、Bookworm Desktop 64位、labwc，不是通用驱动包。需先安装[配套显示工具](https://github.com/tekgroaml/tekgroaml-pi-display-tools)及依赖；`--shape rect`需2.3.2+。切割屏演示在本支持仓库，不包含在标准`screen-test`中。
 
 | 公共编号 | Linux接口 | 板上标号 | 确认配对后USB标签 |
@@ -126,3 +137,5 @@ screen-test pattern --screen 1
 早期5.08英寸已更正为4.0英寸，不单建已测SKU。未完成固件加密判断、固件回读或刷写。双屏同显／异显场景应用及其他未来场景仅讨论规划，不列为已通过的产品功能。
 
 [产品目录](../README.zh-CN.md) · [支持首页](../../README.zh-CN.md)
+
+</details>

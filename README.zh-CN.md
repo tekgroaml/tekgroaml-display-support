@@ -6,6 +6,12 @@
 
 先从你看到的现象开始：**黑屏或闪烁**、**触摸没反应或不准**、**画面显示不完整**。进入对应产品后先看处理步骤，详细参数在各FAQ末尾。
 
+## 先别急着改设置
+
+- **碰线后黑屏或闪烁？**先别动线，等约10～15秒；没恢复就拔下HDMI和USB供电线重新插紧。每次碰线都发生，优先换线。
+- **触摸没反应，或跑到另一屏？**触摸款的USB供电／触摸数据线要插到**正在输出画面的同一台电脑或树莓派上**，不是只插充电头。每块屏的HDMI与USB成组核对，纯充电线不能传触摸。
+- **用Windows？**先看[Windows画面及触摸操作](platforms/windows/README.zh-CN.md)，本仓库的树莓派命令不能在Windows运行。
+
 | 产品 | 中文FAQ | English FAQ |
 | --- | --- | --- |
 | 2.8英寸480×480，触摸属性待确认 | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) |

@@ -6,6 +6,12 @@ Find your screen by **size – resolution – touch capability** in the [product
 
 Start with the symptom you can observe: **no picture or flicker**, **touch missing or inaccurate**, or **part of the image missing**. Open your product below for steps to try. Technical data is available at the end of each FAQ.
 
+## Before changing settings
+
+- **Black or flickering after moving a cable?** Leave it still and wait about 10–15 seconds. If it does not recover, unplug and firmly reconnect HDMI and USB power; try another cable if movement keeps causing it.
+- **No touch, or touch on another screen?** For a touch model, plug its USB power/touch data cable into the **same computer that sends the picture**, not just a charger. Check each screen's HDMI and USB as a pair. A charging-only cable cannot carry touch.
+- **Using Windows?** Start with the [Windows picture and touch steps](platforms/windows/README.md). The Raspberry Pi commands in this repository do not run on Windows.
+
 | Product | English FAQ | 中文FAQ |
 | --- | --- | --- |
 | 2.8-inch 480×480, touch status unconfirmed | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) |

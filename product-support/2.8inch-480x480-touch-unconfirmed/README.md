@@ -2,7 +2,40 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-For the 2.8-inch square 480×480 samples. Check your order to confirm whether your item has touch; that option was not established for the tested pair. The black-screen investigation is still open.
+Please check the size, resolution and touch option on your order. Start with the simple checks below; no commands are needed.
+
+## The screen goes black or flickers after a cable is moved
+
+- Leave the cables still and wait about 10–15 seconds for the picture to return.
+- If it stays black, unplug and firmly reconnect HDMI and the USB power connection. Check both ends.
+- Try another cable and test one screen at a time. Use the power supply specified for your screen.
+
+If this happens every time a cable moves, try replacing that cable. If the screen never lights up, follow the same connection checks first.
+
+## Touch does nothing or controls another screen
+
+- Connect the screen's **USB power/touch cable to the same computer that is sending the picture**. A wall charger can power the screen but cannot send your touches to the computer.
+- Use a USB data cable. A charging-only cable may light the screen without making touch work.
+- With two screens, check each screen's HDMI and USB cable as a pair. Try one screen with its USB cable first, then reconnect the other.
+
+Check your order first: touch was not confirmed for the samples in this entry. A non-touch version will not respond to a finger.
+
+## What can I try in Windows?
+
+Right-click the desktop and open **Display settings**. Select this screen, use its listed resolution and choose **Extend these displays** if you want separate screens. For flicker, open **Advanced display** and try 60Hz only if it is available for that screen.
+
+If touch still goes to the wrong screen, search Windows for **Calibrate the screen for pen or touch input**. Open it, choose **Setup**, and follow the prompts to identify the touchscreen. Check the USB connection first.
+
+[Windows steps with more detail](../../platforms/windows/README.md). The commands in the optional Raspberry Pi section below do **not** run on Windows.
+
+## Still black after these checks?
+
+Please send a photo of the wiring, tell us whether the backlight or power light is on, and include your computer model. The black-screen issue for the tested pair is not yet resolved; we cannot promise a settings change will fix it.
+
+## Optional: Raspberry Pi instructions
+
+<details>
+<summary>Show Raspberry Pi commands (not for Windows)</summary>
 
 Commands below run on the Raspberry Pi after installing the [display tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools). Use version 2.3.2+ for rectangular touch tests. Examples select connector 1 (`HDMI-A-1`, board HDMI0); replace 1 with 2 for connector 2 (board HDMI1). Run screen tests as the desktop user, without sudo.
 
@@ -34,6 +67,8 @@ The Pi could not read the display information on the tested connection, even tho
 ## The screen displays a picture, but finger taps do nothing
 
 Confirm your order is for the touch version, then check the USB data connection. If it has touch, follow the [touch checklist](../_shared/README.md#2-touch-does-not-respond-or-reaches-the-wrong-position). A non-touch version will not react to a finger. No calibration or cut-panel offset has been verified for these samples.
+
+</details>
 
 ## Technical details and test records
 

@@ -1,5 +1,12 @@
 # HDMI Touchscreen: Customer FAQ
 
+## Before changing settings
+
+- **Black or flickering after moving a cable?** Leave it still and wait about 10–15 seconds. If it does not recover, unplug and firmly reconnect HDMI and USB power; try another cable if movement keeps causing it.
+- **No touch, or touch on another screen?** For a touch model, plug its USB power/touch data cable into the **same computer that sends the picture**, not just a charger. Check each screen's HDMI and USB as a pair. A charging-only cable cannot carry touch.
+- **Using Windows?** Start with the [Windows picture and touch steps](../../platforms/windows/README.md). The Raspberry Pi commands in this repository do not run on Windows.
+
+
 **Product-specific instructions:** start with the [English product directory](../../product-support/README.md), especially for the 360×960 cut panel. [中文产品目录](../../product-support/README.zh-CN.md).
 
 For displays that use **HDMI for video and USB for touch data**. Follow the wiring diagram, power requirements and supported operating systems for your specific model. A connector that looks the same may have a different function.

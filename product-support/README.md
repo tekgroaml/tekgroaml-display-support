@@ -8,6 +8,12 @@ Find an item by size, advertised resolution and touch capability. Each product h
 
 Choose your screen below, then find the symptom that matches what you see. Each FAQ gives steps to try first and keeps technical explanations at the end. Products are sorted by screen size.
 
+## Before changing settings
+
+- **Black or flickering after moving a cable?** Leave it still and wait about 10–15 seconds. If it does not recover, unplug and firmly reconnect HDMI and USB power; try another cable if movement keeps causing it.
+- **No touch, or touch on another screen?** For a touch model, plug its USB power/touch data cable into the **same computer that sends the picture**, not just a charger. Check each screen's HDMI and USB as a pair. A charging-only cable cannot carry touch.
+- **Using Windows?** Start with the [Windows picture and touch steps](../platforms/windows/README.md). The Raspberry Pi commands in this repository do not run on Windows.
+
 | Product | What you may see |
 | --- | --- |
 | [2.8-inch 480×480, touch status unconfirmed](2.8inch-480x480-touch-unconfirmed/README.md) | Black screen; “Remote I/O error”; touch option needs checking. |

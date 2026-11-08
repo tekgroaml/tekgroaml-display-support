@@ -2,6 +2,17 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
+## Before changing settings
+
+- **Black or flickering after moving a cable?** Leave it still and wait about 10–15 seconds. If it does not recover, unplug and firmly reconnect HDMI and USB power; try another cable if movement keeps causing it.
+- **No touch, or touch on another screen?** For a touch model, plug its USB power/touch data cable into the **same computer that sends the picture**, not just a charger. Check each screen's HDMI and USB as a pair. A charging-only cable cannot carry touch.
+- **Using Windows?** Start with the [Windows picture and touch steps](../../platforms/windows/README.md). The Raspberry Pi commands in this repository do not run on Windows.
+
+## Optional Raspberry Pi commands and support records
+
+<details>
+<summary>Show technical steps for Raspberry Pi (not Windows)</summary>
+
 Updated 2026-11-08. Use the [product index](../README.md) first. Procedures apply to the tested Pi 4B / Bookworm Desktop 64-bit / labwc environment; they are not a universal driver package. Tools: [TEKGROAML Pi Display Tools](https://github.com/tekgroaml/tekgroaml-pi-display-tools). Install the tools and dependencies before running commands. Use 2.3.2+ for `--shape rect`; the cut-panel demo lives in this support repository, not in stock `screen-test`.
 
 | Public number | Linux connector | Board label | USB cable label after confirmed pairing |
@@ -126,3 +137,5 @@ This is a verified recovery step for that session, not a published automatic hot
 The early 5.08-inch claim was corrected to 4.0 inches, not treated as a separate tested SKU. No firmware-encryption determination, firmware dump or reflash was completed. Dual mirror/extended applications and other future scene apps were discussed, not qualified as working product scenarios.
 
 [Product index](../README.md) · [Support home](../../README.md)
+
+</details>
