@@ -12,13 +12,13 @@
 - **触摸没反应，或跑到另一屏？**触摸款的USB供电／触摸数据线要插到**正在输出画面的同一台电脑或树莓派上**，不是只插充电头。每块屏的HDMI与USB成组核对，纯充电线不能传触摸。
 - **用Windows？**先看[Windows画面及触摸操作](platforms/windows/README.zh-CN.md)，本仓库的树莓派命令不能在Windows运行。
 
-**产品选项已确认：**当前双屏套装都不带触摸；2.1英寸和2.8英寸单屏系列均有触摸型号。2.1英寸的分辨率及专属测试结果尚未记录；有触摸型号不等于已完成触摸验收。此前2.8英寸黑屏双屏记录尚未与具体触摸／非触摸SKU对应。
+**产品选项已确认：**当前双屏套装都不带触摸；2.1英寸和2.8英寸单屏系列均有触摸型号。这两种单屏触摸款均已确认480×480；专属实体验收仍待完成。此前2.8英寸黑屏双屏记录尚未与具体触摸／非触摸SKU对应。
 
 | 产品 | 中文FAQ | English FAQ |
 | --- | --- | --- |
-| 2.1英寸单屏触摸款（分辨率待补充） | [中文](product-support/2.1inch-resolution-unconfirmed-touch/README.zh-CN.md) | [English](product-support/2.1inch-resolution-unconfirmed-touch/README.md) |
+| 2.1英寸480×480单屏触摸款 | [中文](product-support/2.1inch-480x480-touch/README.zh-CN.md) | [English](product-support/2.1inch-480x480-touch/README.md) |
 | 2.1英寸双屏，每屏480×480，非触摸 | [中文](product-support/2.1inch-480x480-dual-nontouch/README.zh-CN.md) | [English](product-support/2.1inch-480x480-dual-nontouch/README.md) |
-| 2.8英寸单屏触摸款（分辨率待补充） | [中文](product-support/2.8inch-resolution-unconfirmed-touch/README.zh-CN.md) | [English](product-support/2.8inch-resolution-unconfirmed-touch/README.md) |
+| 2.8英寸480×480单屏触摸款 | [中文](product-support/2.8inch-480x480-touch/README.zh-CN.md) | [English](product-support/2.8inch-480x480-touch/README.md) |
 | 2.8英寸双屏，每屏480×480，非触摸 | [中文](product-support/2.8inch-480x480-dual-nontouch/README.zh-CN.md) | [English](product-support/2.8inch-480x480-dual-nontouch/README.md) |
 | 2.8英寸480×480历史双屏记录（具体款式待核对） | [中文](product-support/2.8inch-480x480-touch-unconfirmed/README.zh-CN.md) | [English](product-support/2.8inch-480x480-touch-unconfirmed/README.md) |
 | 3.4英寸800×800触摸屏 | [中文](product-support/3.4inch-800x800-touch/README.zh-CN.md) | [English](product-support/3.4inch-800x800-touch/README.md) |
