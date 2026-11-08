@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the bilingual buyer FAQ from repository Markdown. Needs reportlab.
+"""Build the English-only buyer FAQ from repository Markdown. Needs reportlab.
 
 Usage: python3 scripts/build-faq-pdf.py --font /path/to/CJK-font.ttf
 Use a font licensed for PDF embedding; font files are not distributed here.
@@ -69,6 +69,10 @@ def buyer_text(path):
     if path.parent == ROOT:
         text = '\n'.join(line for line in text.splitlines()
                          if not any(x in line for x in ('Maintainers:', '维护者：', 'Seller support materials', '卖家支持资料', 'Publishing notes', '发布说明')))
+    # The English export keeps online Chinese pages but removes language-switch links.
+    text = re.sub(r'\|\s*\[中文\]\([^)]+\)\s*(?=\||$)', '', text, flags=re.M)
+    text = text.replace('| Product | English FAQ | 中文FAQ |', '| Product | English FAQ |')
+    text = re.sub(r'^\| --- \| --- \| --- \|$', '| --- | --- |', text, flags=re.M) if path.parent == ROOT else text
     # Do not include large technical diagrams or formulas ahead of buyer guidance.
     text = re.sub(r'```mermaid.*?```', '', text, flags=re.S)
     return text
@@ -155,14 +159,21 @@ def main():
     def footer(c,d):
         c.saveState();c.setStrokeColor(colors.HexColor('#CBDDE4'));c.line(18*mm,14*mm,192*mm,14*mm)
         c.setFont('FAQ',7);c.setFillColor(colors.HexColor('#55717F'))
-        c.drawString(18*mm,9*mm,'TEKGROAML • Buyer FAQ / 买家FAQ')
+        c.drawString(18*mm,9*mm,'TEKGROAML • Buyer FAQ')
         c.drawRightString(192*mm,9*mm,str(d.page))
         c.linkURL(HOME,(18*mm,6*mm,112*mm,13*mm),relative=0);c.restoreState()
-    doc=FAQDoc(str(args.output),pagesize=A4,leftMargin=18*mm,rightMargin=18*mm,topMargin=17*mm,bottomMargin=19*mm,title='TEKGROAML Display Support - Complete Buyer FAQ / 买家FAQ总册',author='TEKGROAML')
+    doc=FAQDoc(str(args.output),pagesize=A4,leftMargin=18*mm,rightMargin=18*mm,topMargin=17*mm,bottomMargin=19*mm,title='TEKGROAML Display Support - Complete Buyer FAQ',author='TEKGROAML')
     doc.addPageTemplates(PageTemplate(id='normal',frames=Frame(doc.leftMargin,doc.bottomMargin,doc.width,doc.height,id='content',leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0),onPage=footer))
-    story=[Spacer(1,20*mm),para('TEKGROAML<br/>Display Support','title'),para('Complete Buyer FAQ<br/>显示屏买家FAQ总册','h1'),para('English first • 简体中文在后','h2'),Spacer(1,8*mm),para('Latest guides / 最新文档','h2'),para(f'<a href="{HOME}" color="#126D8C">{HOME}</a>'),para('Click the address above to visit our GitHub home page.<br/>点击以上地址即可进入GitHub首页，查找最新FAQ和工具。'),Spacer(1,7*mm),para('Connection checks • Windows • Product FAQs • Dual-screen demos<br/>接线检查、Windows操作、各产品处理步骤、双屏演示说明'),Spacer(1,10*mm),para(f'Document date / 文档日期: {escape(args.date)}<br/>Source snapshot / 来源版本: {escape(rev)}','small'),para('This buyer edition collects the home-page introduction, Windows guide, and product troubleshooting steps. Detailed experiment records and evidence remain linked online. No new hardware testing is implied.<br/>本册收录首页说明、Windows指南和各产品排查步骤。详细试验记录及证据通过链接在线查看；不表示进行了新的硬件验收。','small'),PageBreak(),para('Contents / 目录','h1')]
+    story=[Spacer(1,20*mm),para('TEKGROAML<br/>Display Support','title'),
+           para('Complete Buyer FAQ','h1'),para('English edition','h2'),Spacer(1,8*mm),
+           para('Latest guides','h2'),para(f'<a href="{HOME}" color="#126D8C">{HOME}</a>'),
+           para('Click the address above to visit our GitHub home page.'),Spacer(1,7*mm),
+           para('Connection checks • Windows • Product FAQs • Dual-screen demos'),Spacer(1,10*mm),
+           para(f'Document date: {escape(args.date)}<br/>Source snapshot: {escape(rev)}','small'),
+           para('This English buyer edition collects the home-page introduction, Windows guide, and product troubleshooting steps. Detailed experiment records and evidence remain linked online. No new hardware testing is implied.','small'),
+           PageBreak(),para('Contents','h1')]
     toc=TableOfContents();toc.levelStyles=[ParagraphStyle('TOC',fontName='FAQ',fontSize=9.3,leading=14,spaceBefore=3,wordWrap='CJK')];story.extend([toc,PageBreak()])
-    for lang in ('en','cn'):
+    for lang in ('en',):
         name='README.md' if lang=='en' else 'README.zh-CN.md'
         paths=[ROOT/name,ROOT/'platforms/windows'/name]
         paths += [ROOT/'product-support'/p/name for p in PRODUCTS]
