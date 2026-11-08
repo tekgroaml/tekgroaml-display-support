@@ -11,6 +11,12 @@ These are provisional support records, not four newly identified SKUs. Each pane
 | Round / same content | One 480×480 signal; approximately 62.811Hz on an earlier connection, 71.295Hz on a later one | [App rejects the new board's input; no forced 60Hz](480x480-round-dual-clone-nontouch/README.md) |
 | Square / same content | One 480×480 signal, approximately 62.811Hz | [Desktop works but app rejects refresh rate](480x480-square-dual-clone-nontouch/README.md) |
 
+## Dual-screen uses and picture distribution
+
+**For these one-HDMI kits, same content repeats the full picture on both panels; different content uses a left/right picture prepared by the app, with one part on each panel.** Copying suits repeated information and symmetry; splitting suits instruments and primary/secondary dashboards. “Mirroring” here preserves reading orientation rather than reversing text.
+
+[Round/square use cases, board-flow diagrams and demo entrypoints](../_shared/dual-screen/README.md). One HDMI kit may correctly appear as one monitor. Hardware-copy single-picture input and SBS double-width input are not interchangeable.
+
 ## Is the input one picture or two side-by-side regions?
 
 A **hardware-copy (clone) board** receives one picture and sends it to both panels. An **SBS board** receives a double-width picture and sends half to each panel. Both can use one HDMI cable and appear as one logical monitor. An SBS app can repeat its image to show the same content, but this does not make a hardware-copy board accept a double-width signal.

@@ -15,6 +15,12 @@ The host can produce a complete left/right image while only one physical panel l
 
 If unresolved, send a photo showing both panels, backlight state, host/OS, supply rating, HDMI/USB connections and board label. Do not repeatedly apply other products' profiles. There is no guaranteed software cure for an unidentified fault.
 
+## Which uses suit this display arrangement?
+
+**Smart home, PC case and industrial equipment**. Use left environment/right energy, CPU/cooling, or pump/trends for linked multi-metric dashboards.
+
+Different content splits one combined left/right input canvas into two parts, one per panel; the application prepares both views first. These are implemented simulated demos, not proof of a SKU assignment or complete physical acceptance at every size. See [use cases and board diagrams](../../_shared/dual-screen/README.md).
+
 ## Windows shows only one display number. Is one panel missing?
 
 One logical output can be normal when one HDMI board drives two panels. Windows Duplicate/Extend controls host outputs; it cannot automatically change the board's internal copy/split design. Pi programs in this repository are not Windows drivers. Full Windows product acceptance has not been completed for this kit.

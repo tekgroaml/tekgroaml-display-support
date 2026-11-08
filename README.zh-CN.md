@@ -26,6 +26,12 @@
 | 6.2英寸360×960切割触摸屏 | [中文](product-support/6.2inch-360x960-touch/README.zh-CN.md) | [English](product-support/6.2inch-360x960-touch/README.md) |
 | 6.2英寸360×960切割非触摸屏 | [中文](product-support/6.2inch-360x960-nontouch/README.zh-CN.md) | [English](product-support/6.2inch-360x960-nontouch/README.md) |
 
+## 双屏同显与异显：场景和画面分配
+
+**本系列一根HDMI带两屏：同显时两屏重复完整画面；异显时应用先准备左右两页，再分别显示到两屏。** 同显适合重复信息／对称装饰，异显适合仪表／主辅看板。这里“镜像”表示正常方向的画面复制，不是文字左右翻转。
+
+[查看圆形／方形应用场景、驱动板流向图与演示入口](product-support/_shared/dual-screen/README.zh-CN.md)。一根HDMI在系统里只显示一个编号可以是正常的；同显板的单幅输入与SBS板的双宽输入不能直接混用。
+
 ## 非触摸双屏套装（尺寸待核对）
 
 [按形状与同显／异显查看](product-support/_unconfirmed/README.zh-CN.md)：圆形异显、方形异显、圆形同显、方形同显。新增问题包括只有一块显示、换屏后演示停止、480×480与960×480输入混用，以及应用未接受实际上报的约62.811／71.295Hz。

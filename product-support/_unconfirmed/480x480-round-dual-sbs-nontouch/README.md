@@ -15,6 +15,12 @@ The tested driver board used one double-width input for two different pictures. 
 
 If unresolved, send a photo showing both panels, backlight state, host/OS, supply rating, HDMI/USB connections and board label. Do not repeatedly apply other products' profiles. There is no guaranteed software cure for an unidentified fault.
 
+## Which uses suit this display arrangement?
+
+**Flight instruments, automotive instruments and PC case**. Use left attitude/right airspeed, speed/engine, or CPU/GPU to separate primary and supporting information.
+
+Different content splits one combined left/right input canvas into two parts, one per panel; the application prepares both views first. These are implemented simulated demos, not proof of a SKU assignment or complete physical acceptance at every size. See [use cases and board diagrams](../../_shared/dual-screen/README.md).
+
 ## Windows shows only one display number. Is one panel missing?
 
 One logical output can be normal when one HDMI board drives two panels. Windows Duplicate/Extend controls host outputs; it cannot automatically change the board's internal copy/split design. Pi programs in this repository are not Windows drivers. Full Windows product acceptance has not been completed for this kit.

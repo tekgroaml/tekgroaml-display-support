@@ -15,6 +15,12 @@ A hardware-copy board needs one square picture, not the double-width picture use
 
 If unresolved, send a photo showing both panels, backlight state, host/OS, supply rating, HDMI/USB connections and board label. Do not repeatedly apply other products' profiles. There is no guaranteed software cure for an unidentified fault.
 
+## Which uses suit this display arrangement?
+
+**Music visualization, RGB ambience and desktop clock**. Both panels repeat the same spectrum, halo or time for a symmetrical desk, speakers or opposite viewers.
+
+Same content copies one complete picture to both panels in the same orientation; mirroring does not mean horizontal reversal. These are implemented simulated demos, not proof of a SKU assignment or complete physical acceptance at every size. See [use cases and board diagrams](../../_shared/dual-screen/README.md).
+
 ## Windows shows only one display number. Is one panel missing?
 
 One logical output can be normal when one HDMI board drives two panels. Windows Duplicate/Extend controls host outputs; it cannot automatically change the board's internal copy/split design. Pi programs in this repository are not Windows drivers. Full Windows product acceptance has not been completed for this kit.

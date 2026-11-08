@@ -28,6 +28,12 @@ Choose your screen below, then find the symptom that matches what you see. Each 
 | [6.2-inch 360×960 cut-panel touchscreen](6.2inch-360x960-touch/README.md) | Left-side content missing; left touches offset; picture flickers. |
 | [6.2-inch 360×960 cut panel, non-touch](6.2inch-360x960-nontouch/README.md) | Brightness pulses; image cropped; finger taps have no response. |
 
+## Dual-screen uses and picture distribution
+
+**For these one-HDMI kits, same content repeats the full picture on both panels; different content uses a left/right picture prepared by the app, with one part on each panel.** Copying suits repeated information and symmetry; splitting suits instruments and primary/secondary dashboards. “Mirroring” here preserves reading orientation rather than reversing text.
+
+[Round/square use cases, board-flow diagrams and demo entrypoints](_shared/dual-screen/README.md). One HDMI kit may correctly appear as one monitor. Hardware-copy single-picture input and SBS double-width input are not interchangeable.
+
 ## Non-touch dual-screen records with size unconfirmed
 
 [Choose shape and same/different content](_unconfirmed/README.md): round SBS, square SBS, round hardware-copy and square hardware-copy kits. Added issues cover one dark panel, demos stopping after a swap, mixing 480×480 and 960×480 inputs, and apps rejecting observed ~62.811/~71.295Hz rates.

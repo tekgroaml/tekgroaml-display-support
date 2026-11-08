@@ -14,6 +14,12 @@ One logical monitor can be normal. A hardware-copy board duplicates one picture;
 
 For one dark panel, check cables, power and the board first. A complete two-region screenshot does not rule out a physical fault. If a demo stops after changing boards, inspect input/layout compatibility instead of applying another product's timing profile or forcing 60Hz.
 
+## Dual-screen uses and picture distribution
+
+**For these one-HDMI kits, same content repeats the full picture on both panels; different content uses a left/right picture prepared by the app, with one part on each panel.** Copying suits repeated information and symmetry; splitting suits instruments and primary/secondary dashboards. “Mirroring” here preserves reading orientation rather than reversing text.
+
+[Round/square use cases, board-flow diagrams and demo entrypoints](dual-screen/README.md). One HDMI kit may correctly appear as one monitor. Hardware-copy single-picture input and SBS double-width input are not interchangeable.
+
 ## Optional Raspberry Pi commands and support records
 
 <details>
